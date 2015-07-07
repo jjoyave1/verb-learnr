@@ -1,0 +1,73 @@
+html {
+  box-sizing: border-box; }
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit; }
+
+body {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto; }
+  body::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+.head-nav {
+  margin-bottom: 2rem;
+  border-bottom: solid 9px brown; }
+
+.links {
+  position: absolute;
+  right: 1em;
+  top: 1em; }
+
+.login-wrap {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 82.94039%;
+  margin-left: 8.5298%; }
+  .login-wrap:last-child {
+    margin-right: 0; }
+  .login-wrap .login-headers {
+    border-bottom: solid 9px brown; }
+
+.registration-form {
+  text-align: center;
+  padding: 3rem;
+  margin: 0 auto; }
+  .registration-form label {
+    text-align: left; }
+
+.reg-head {
+  cursor: pointer;
+  outline: none; }
+
+.reg-input {
+  width: 20rem; }
+
+.reg-submit {
+  width: 30%; }
+
+.reg-card {
+  display: none; }
+
+.login-form {
+  text-align: center;
+  padding: 3rem;
+  margin: 0 auto; }
+  .login-form label {
+    text-align: left; }
+
+.login-head {
+  cursor: pointer;
+  outline: none; }
+
+.login-input {
+  width: 20rem; }
+
+.login-submit {
+  width: 84.1%; }

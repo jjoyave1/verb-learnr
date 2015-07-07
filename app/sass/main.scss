@@ -1,0 +1,101 @@
+@import 'bourbon/bourbon';
+@import 'neat/neat';
+
+body {
+  @include outer-container(100%);
+}
+
+//
+//  NAV BAR STYLING
+//
+
+.head-nav {
+  margin-bottom: 2rem;
+  border-bottom: solid 9px brown;
+}
+.links {
+  position: absolute;
+  right: 1em;
+  top: 1em;
+}
+
+//
+//
+//
+
+
+//
+//  REGISTRATION FORM STYLING
+//
+
+.login-wrap {
+  @include span-columns(10);
+  @include shift(1);
+
+  .login-headers {
+    border-bottom: solid 9px brown;
+  }
+}
+
+.registration-form {
+  text-align: center;
+  padding: 3rem;
+  margin: 0 auto;
+
+  label {
+    text-align: left;
+  }
+}
+
+.reg-head {
+  cursor: pointer;
+  outline: none;
+}
+
+.reg-input {
+  width: 20rem;
+}
+
+.reg-submit {
+  width: 30%;
+}
+
+.reg-card {
+  display: none;
+}
+
+//
+//
+//
+
+//
+// LOGIN FORM STYLING
+//
+
+.login-form {
+  text-align: center;
+  padding: 3rem;
+  margin: 0 auto;
+
+  label {
+    text-align: left;
+  }
+}
+
+.login-head {
+  cursor: pointer;
+  outline: none;
+}
+
+.login-input {
+  width: 20rem;
+}
+
+.login-submit {
+  width: 84.1%;
+}
+
+//
+//
+//
+

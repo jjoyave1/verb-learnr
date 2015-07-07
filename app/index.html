@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Project Name</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/vendor/normalize.css">
+  <link rel="stylesheet" href="css/vendor/angular-material.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body ng-app="Unoverb">
+
+
+  <div class="container">
+
+<!-- NAV SECTION  -->
+    <md-toolbar class="head-nav">
+      <div class="md-toolbar-tools">
+        <h3><span><a href="/">UNOVBRNRBR</a></span></h3>
+        <div class="links" ng-controller="User">
+          <a href="/#/login" ng-click="login()">Login</a> &bull;
+          <a href="/#/profile">Profile</a> &bull; <!--  add :id later -->
+          <a href="/#/logout" ng-click="logout()">Logout</a> &bull;
+          <a href="/#/dashboard">Dash</a>
+        </div>
+      </div>
+    </md-toolbar>
+<!--  -->
+
+
+    <div ui-view class="md-primary"></div>
+<!--     <md-content ui-view layout-padding>
+
+    </md-content> -->
+  </div>
+
+
+  <!-- VENDOR -->
+  <script src="js/vendor/jquery.js"></script>
+  <script src="js/vendor/underscore.js"></script>
+  <script src="js/vendor/angular.js"></script>
+  <script src="js/vendor/angular-ui-router.js"></script>
+  <script src="js/vendor/angular-cookies.js"></script>
+  <script src="js/vendor/angular-animate.js"></script>
+  <script src="js/vendor/angular-aria.js"></script>
+  <script src="js/vendor/angular-material.js"></script>
+
+  <!-- MAIN -->
+  <script src="js/main.js"></script>
+  <!-- // <script src="js/main.router.js"></script> -->
+  <script src="js/users/user.service.js"></script>
+  <script src="js/users/user.controller.js"></script>
+  <script src="js/users/user.directive.js"></script>
+  <!-- // <script src="js/verbs/verb.service.js"></script> -->
+  <!-- // <script src="js/verbs/verb.controller.js"></script> -->
+  <!-- // <script src="js/verbs/verb.directive.js"></script> -->
+
+</body>
+</html>

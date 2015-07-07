@@ -1,0 +1,86 @@
+
+
+<div ng-controller="User" layout="column" layout-align="center center" class="md-whiteframe-z2 login-wrap">
+
+  <md-toolbar>
+    <div class="md-toolbar-tools login-head login-headers" id="login-head" ng-click="loginSlide()">
+      <h2>Log in</h2>
+    </div>
+  </md-toolbar>
+
+  <md-content md-primary layout-padding layout="row" layout-sm="column" id="login-card" class="login-card">
+
+
+    <form ng-submit="login(user)" id="login-form" class="login-form">
+
+      <div style="display: inline-block;">
+
+        <md-input-container>
+          <label>Username</label>
+          <input ng-model="user.username" class="login-input">
+        </md-input-container>
+
+        <md-input-container>
+          <label>Password</label>
+          <input ng-model="user.password" type="password" class="login-input">
+        </md-input-container>
+
+      </div>
+
+      <br>
+
+      <md-button class="md-accent md-hue-3 md-raised login-submit">Log in</md-button>
+
+    </form>
+
+  </md-content>
+
+  <md-toolbar>
+    <div class="md-toolbar-tools reg-head login-headers" id="reg-head" ng-click="regSlide()">
+      <h2>Register</h2>
+    </div>
+  </md-toolbar>
+
+  <md-content md-primary layout-padding layout="row" layout-sm="column" id="reg-card" class="reg-card">
+
+
+    <form ng-submit="userSignUp(user)" id="registration-form" class="registration-form">
+
+      <div style="display: inline-block;">
+        <md-input-container>
+          <label>Username</label>
+          <input ng-model="user.username" class="reg-input">
+        </md-input-container>
+
+        <md-input-container>
+          <label>Email</label>
+          <input ng-model="user.email" type="email" class="reg-input">
+        </md-input-container>
+      </div>
+
+      <div style="display: inline-block;">
+        <md-input-container>
+          <label>Password</label>
+          <input ng-model="user.password" type="password" class="reg-input">
+        </md-input-container>
+
+        <md-input-container>
+          <label>Repeat Password</label>
+          <input ng-model="user.password" type="password" class="reg-input">
+        </md-input-container>
+      </div>
+
+      <br>
+
+      <md-button class="md-accent md-hue-3 md-raised reg-submit">Submit</md-button>
+
+    </form>
+
+  </md-content>
+
+
+
+
+
+
+</div>
