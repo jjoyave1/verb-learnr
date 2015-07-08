@@ -6,4 +6,4 @@ This was built partnering with Rickard Sunden (https://github.com/sunrick/), Rai
 
 ## Usage
 
-Deployed: http://./
+Deployed: http://http://development.unoverb.divshot.io/

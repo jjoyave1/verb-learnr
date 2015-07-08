@@ -29,7 +29,7 @@
 
       <br>
 
-      <md-button class="md-accent md-hue-3 md-raised login-submit">Log in</md-button>
+      <md-button class="md-accent md-hue-3 md-raised login-submit" ng-click="showLoginToast()">Log in</md-button>
 
     </form>
 
@@ -46,7 +46,7 @@
 
     <form ng-submit="userSignUp(user)" id="registration-form" class="registration-form">
 
-      <div style="display: inline-block;">
+      <div class="row" style="display: inline-block;">
         <md-input-container>
           <label>Username</label>
           <input ng-model="user.username" class="reg-input">
@@ -58,7 +58,7 @@
         </md-input-container>
       </div>
 
-      <div style="display: inline-block;">
+      <div class="row" style="display: inline-block;">
         <md-input-container>
           <label>Password</label>
           <input ng-model="user.password" type="password" class="reg-input">
@@ -66,7 +66,19 @@
 
         <md-input-container>
           <label>Repeat Password</label>
-          <input ng-model="user.password" type="password" class="reg-input">
+          <input type="password" class="reg-input">
+        </md-input-container>
+      </div>
+
+      <div class="row" style="display: inline-block;">
+        <md-input-container>
+          <label>First Name</label>
+          <input ng-model="user.first_name" type="text" class="regname-input">
+        </md-input-container>
+
+        <md-input-container>
+          <label>Last Name</label>
+          <input type="text" ng-model="user.last_name" class="regname-input">
         </md-input-container>
       </div>
 

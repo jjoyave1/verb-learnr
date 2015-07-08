@@ -18,10 +18,10 @@
       <div class="md-toolbar-tools">
         <h3><span><a href="/">UNOVBRNRBR</a></span></h3>
         <div class="links" ng-controller="User">
-          <a href="/#/login" ng-click="login()">Login</a> &bull;
-          <a href="/#/profile">Profile</a> &bull; <!--  add :id later -->
-          <a href="/#/logout" ng-click="logout()">Logout</a> &bull;
-          <a href="/#/dashboard">Dash</a>
+          <a href="/#/login">Login</a> &bull;
+          <a href="/#/profile" ng-click="getProfile()">Profile</a> &bull; <!--  need to add :id to url -->
+          <a href="/#/dashboard">Dash</a> &bull;
+          <a href="/#/logout" ng-click="logout()">Logout</a>
         </div>
       </div>
     </md-toolbar>
@@ -29,10 +29,10 @@
 
 
     <div ui-view class="md-primary"></div>
-<!--     <md-content ui-view layout-padding>
+<!--    <md-content ui-view layout-padding>
 
-    </md-content> -->
-  </div>
+        </md-content> -->
+    </div>
 
 
   <!-- VENDOR -->

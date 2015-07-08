@@ -56,6 +56,10 @@ body {
   width: 20rem;
 }
 
+.regname-input {
+  width: 15rem;
+}
+
 .reg-submit {
   width: 30%;
 }
@@ -93,6 +97,19 @@ body {
 
 .login-submit {
   width: 84.1%;
+}
+
+//
+// PROFILE PAGE STYLING
+//
+
+.profile-wrap {
+  @include span-columns(10);
+  @include shift(1);
+
+  .profile-headers {
+    border-bottom: solid 9px brown;
+  }
 }
 
 //

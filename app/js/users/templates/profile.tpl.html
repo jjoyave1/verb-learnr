@@ -1,3 +1,10 @@
-<div ng-controller="User" layout="column" layout-align="center center" class="md-whiteframe-z2">
-  <p> THIS IS THE PROFILE PAGE</p>
+<div ng-controller="User" layout="column" layout-align="center center" class="md-whiteframe-z2 profile-wrap">
+
+  <md-toolbar>
+    <div class="md-toolbar-tools profile-head profile-headers" id="profile-head">
+      <h2> {{ sessionUser.username }}'s Profile</h2>
+    </div>
+  </md-toolbar>
+
+
 </div>

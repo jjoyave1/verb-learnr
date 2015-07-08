@@ -41,11 +41,51 @@
 
     .constant('HEROKU', {
 
-    URL: '',
+    URL: 'https://protected-scrubland-4220.herokuapp.com/',
     CONFIG: {
       headers: {}
     }
 
-  });
+  })
+    .run(['$rootScope', '$stateParams', '$state', '$cookies',
+
+      function ($rootScope, $stateParams, $state, $cookies) {
+
+        $rootScope.$on('$stateChangeSuccess', function () {
+
+          console.log($state.current.name);
+
+          var currentUser;
+
+          var dashCheck = function () {
+            currentUser = $cookies.get('sessionToken') !== undefined;
+            if (currentUser) {
+              $state.go('dashboard');
+            }
+          };
+
+          var loginCheck = function () {
+            currentUser = $cookies.get('sessionToken') !== undefined;
+            if (currentUser !== true) {
+              $state.go('home');
+            }
+          };
+
+          if ($state.current.name === 'home') {
+            dashCheck();
+          }
+
+          if ($state.current.name === 'login') {
+            dashCheck();
+          } else {
+            loginCheck();
+          }
+
+        });
+
+      }
+
+    ]);
+
 
 }());

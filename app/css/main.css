@@ -49,6 +49,9 @@ body {
 .reg-input {
   width: 20rem; }
 
+.regname-input {
+  width: 15rem; }
+
 .reg-submit {
   width: 30%; }
 
@@ -71,3 +74,14 @@ body {
 
 .login-submit {
   width: 84.1%; }
+
+.profile-wrap {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 82.94039%;
+  margin-left: 8.5298%; }
+  .profile-wrap:last-child {
+    margin-right: 0; }
+  .profile-wrap .profile-headers {
+    border-bottom: solid 9px brown; }
