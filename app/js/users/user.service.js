@@ -4,7 +4,7 @@
 
   angular.module('Unoverb')
 
-    .service('UserService', ['$http', 'HEROKU', '$location', '$cookies', '$state', function ($http, HEROKU, $location, $cookies, $state) {
+    .service('UserService', ['$http', 'HEROKU', '$location', '$cookies', '$state', '$q', function ($http, HEROKU, $location, $cookies, $state, $q) {
 
     var endpoint = HEROKU.URL;
 
@@ -49,9 +49,6 @@
 
     };
 
-    var _currentUser = function (data) {
-
-    };
 ///
 ///
 ///
@@ -101,27 +98,23 @@
     this.userLogout = function() {
 
       $cookies.remove('sessionToken');
+      HEROKU.CONFIG.headers["Access-Token"] = "";
       $cookies.remove('username');
-      // $cookies.remove('full_name');
-      // $cookies.remove('email');
-      // $cookies.remove('password');
 
-      // var tst = $cookies.get('sessionToken');
       $state.go('home');
     };
 
     this.userProfile = function () {
 
+      var deferred = $q.defer();
       HEROKU.CONFIG.headers["Access-Token"] = $cookies.get('sessionToken');
+      $http.get(endpoint + 'users/profile', HEROKU.CONFIG).then( function (res) {
 
-      $http({
-        method : 'GET',
-        url : endpoint + 'users/profile',
-        params : HEROKU.CONFIG.headers
-      }).success( function (data) {
-        console.log(data);
+        return deferred.resolve(res.data);
+
       });
 
+      return deferred.promise;
     };
 
 

@@ -28,7 +28,8 @@
       .state('profile', {
 
         url: '/profile',
-        templateUrl: "js/users/templates/profile.tpl.html"
+        templateUrl: "js/users/templates/profile.tpl.html",
+        controller: 'User'
 
       })
 
@@ -43,7 +44,9 @@
 
     URL: 'https://protected-scrubland-4220.herokuapp.com/',
     CONFIG: {
-      headers: {}
+      headers: {
+        "Access-Token" : ""
+      }
     }
 
   })
@@ -55,18 +58,18 @@
 
           console.log($state.current.name);
 
-          var currentUser;
+          var sessionUser;
 
           var dashCheck = function () {
-            currentUser = $cookies.get('sessionToken') !== undefined;
-            if (currentUser) {
+            sessionUser = $cookies.get('sessionToken') !== undefined;
+            if (sessionUser) {
               $state.go('dashboard');
             }
           };
 
           var loginCheck = function () {
-            currentUser = $cookies.get('sessionToken') !== undefined;
-            if (currentUser !== true) {
+            sessionUser = $cookies.get('sessionToken') !== undefined;
+            if (sessionUser !== true) {
               $state.go('home');
             }
           };

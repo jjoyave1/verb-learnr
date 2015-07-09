@@ -4,16 +4,17 @@
 
   angular.module('Unoverb')
 
-    .controller('User', ['$scope', '$http', 'UserService', 'HEROKU', '$location', '$cookies', '$mdToast',
+    .controller('User', ['$scope', '$http', 'UserService', 'HEROKU', '$location', '$cookies', '$mdToast', '$q',
 
-      function ($scope, $http, UserService, HEROKU, $location, $cookies, $mdToast) {
+      function ($scope, $http, UserService, HEROKU, $location, $cookies, $mdToast, $q) {
 
       var User = function(options) {
 
         this.username = options.username;
-        this.password = options.password;
+        this.first_name = options.first_name;
+        this.last_name = options.last_name;
         this.email = options.email;
-        this.full_name = options.first_name + " " + options.last_name;
+        this.password = options.password;
 
       };
 
@@ -43,15 +44,26 @@
 
         UserService.userLogout();
         $scope.showLogoutToast();
+        // $scope.currentUser = {};
 
       };
+
 
       $scope.getProfile = function () {
 
-        UserService.userProfile();
+        UserService.userProfile()
+        .then( function (data) {
+          return data;
+        });
 
+        console.log($scope.currentUser);
       };
 
+      $scope.currentUser =
+        UserService.userProfile()
+        .then( function (data) {
+          return data;
+        });
 
 ///
 /// LOGIN ACCORDION FUNCTIONS

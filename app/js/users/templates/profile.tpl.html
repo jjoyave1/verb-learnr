@@ -1,10 +1,17 @@
-<div ng-controller="User" layout="column" layout-align="center center" class="md-whiteframe-z2 profile-wrap">
+<div layout="column" layout-align="center center" class="md-whiteframe-z2 profile-wrap">
 
   <md-toolbar>
     <div class="md-toolbar-tools profile-head profile-headers" id="profile-head">
-      <h2> {{ sessionUser.username }}'s Profile</h2>
+      <h2> {{ currentUser.$$state.value.username }}'s Profile</h2>
     </div>
   </md-toolbar>
 
+  <md-content class ="profile-content">
+    <p>{{ currentUser.$$state.value.username }}</p>
+    <p>{{ currentUser.$$state.value.first_name }} {{ currentUser.$$state.value.last_name }}</p>
+    <p>{{ currentUser.$$state.value.email }}</p>
+    <p><!-- {{ currentUser.$$state.value.avatar }} --> avatar</p>
 
+
+  </md-content>
 </div>
