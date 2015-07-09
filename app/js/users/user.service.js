@@ -17,6 +17,7 @@
 ////
 
     var _routeUser = function (st) {
+
       if (st === undefined) {
 
         //route to login
@@ -61,7 +62,6 @@
 
       $http.post(HEROKU.URL + 'users/signup', user)
         .success( function (data) {
-          console.log(data);
         }
       );
     };
@@ -107,10 +107,11 @@
     this.userProfile = function () {
 
       var deferred = $q.defer();
+
       HEROKU.CONFIG.headers["Access-Token"] = $cookies.get('sessionToken');
 
       $http.get(endpoint + 'users/profile', HEROKU.CONFIG).then( function (res) {
-
+        console.log(deferred);
         return deferred.resolve(res.data);
 
       });
@@ -124,19 +125,31 @@
 
       $http.put(endpoint + 'users/profile', user, HEROKU.CONFIG)
         .success( function (data) {
-          console.log(data);
+          // console.log(data);
         });
 
     };
 
-    this.deleteProfile = function(user) {
+    this.deleteProfile = function(data) {
 
       HEROKU.CONFIG.headers["Access-Token"] = $cookies.get('sessionToken');
 
-      console.log(user);
+      console.log(HEROKU.CONFIG);
 
-      $http.delete(endpoint + 'users/delete', user, HEROKU.CONFIG).success( function (data) {
-        console.log(data);
+      $http({
+
+        method: 'DELETE',
+        url: endpoint + 'users/delete',
+        headers: HEROKU.CONFIG.headers,
+        params: data
+
+      }).success( function (x) {
+
+        console.log(x);
+
+        HEROKU.CONFIG.headers["Access-Token"] = "";
+
+        $cookies.remove('sessionToken');
       });
     };
 

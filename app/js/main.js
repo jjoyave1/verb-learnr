@@ -29,7 +29,12 @@
 
         url: '/profile',
         templateUrl: "js/users/templates/profile.tpl.html",
-        controller: 'User'
+        controller: 'Profile'
+        // resolve: {
+        //   profileResolved: function ( UserService ) {
+        //     return UserService.userProfile();
+        //   }
+        // }
 
       })
 

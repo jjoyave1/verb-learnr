@@ -66,67 +66,65 @@
 ///
 ///
 
-///
-/// PROFILE HANDLERS
-///
+// ///
+// /// PROFILE HANDLERS
+// ///
 
-      $scope.getProfile = function () {
+//       $scope.getProfile = function () {
 
-        UserService.userProfile()
-        .then( function (data) {
-          return data;
-        });
-      };
+//         UserService.userProfile()
+//         .then( function (data) {
+//           return data;
+//         });
+//       };
 
-      $scope.currentUser = UserService.userProfile().then( function (data) { return data; });
+//       $scope.currentUser = UserService.userProfile().then( function (data) { return data; });
 
-      $scope.updateProfile = function (x) {
+//       $scope.updateProfile = function (x) {
 
-        var user = new User({
+//         var user = new User({
 
-          username : x.username,
-          first_name : x.first_name,
-          last_name : x.last_name,
-          email : x.email,
-          password : x.password
+//           username : x.username,
+//           first_name : x.first_name,
+//           last_name : x.last_name,
+//           email : x.email,
+//           password : x.password
 
-        });
+//         });
 
-        UserService.editProfile(user);
+//         UserService.editProfile(user);
 
-      };
+//       };
 
-      $scope.showDeleteSheet = function ($event) {
-        $mdBottomSheet.show({
-          templateUrl : "js/users/templates/deletesheet.tpl.html",
-          targetEvent : $event
-        });
-      };
+//       $scope.showDeleteSheet = function ($event) {
+//         $mdBottomSheet.show({
+//           templateUrl : "js/users/templates/deletesheet.tpl.html",
+//           targetEvent : $event
+//         });
+//       };
 
-      $scope.deleteUser = function(pw) {
+//       $scope.deleteUser = function(pw) {
 
-        // console.log("ayy");
+//         // console.log("ayy");
 
-        UserService.deleteProfile(pw);
+//         UserService.deleteProfile(pw);
 
-        // HEROKU.CONFIG.headers["Access-Token"] = "";
+//         $mdBottomSheet.hide();
 
-        // $cookies.remove('sessionToken');
+//         $state.go('login');
+//       };
 
-        $state.go('login');
-      };
+//       $scope.enableInputs = function () {
+//         $('#prof-firstname').prop('disabled', false);
+//         $('#prof-lastname').prop('disabled', false);
+//         $('#prof-email').prop('disabled', false);
+//         $('#prof-avatar').prop('disabled', false);
+//         $('#prof-submit').prop('disabled', false);
+//       };
 
-      $scope.enableInputs = function () {
-        $('#prof-firstname').prop('disabled', false);
-        $('#prof-lastname').prop('disabled', false);
-        $('#prof-email').prop('disabled', false);
-        $('#prof-avatar').prop('disabled', false);
-        $('#prof-submit').prop('disabled', false);
-      };
-
-///
-///
-///
+// ///
+// ///
+// ///
 
 ///
 /// LOGIN TOAST FUNCTION
