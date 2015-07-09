@@ -74,6 +74,21 @@
         $('#prof-submit').prop('disabled', false);
       };
 
+      $scope.showPasswordSheet = function ($event) {
+        $mdBottomSheet.show({
+          templateUrl : "js/users/templates/passwordsheet.tpl.html",
+          targetEvent : $event
+        });
+      };
+
+      $scope.modifyPassword = function (pw) {
+
+        UserService.changePw(pw);
+        $mdBottomSheet.hide();
+        $state.go('profile');
+
+      };
+
 ///
 ///
 ///

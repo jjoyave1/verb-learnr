@@ -153,6 +153,26 @@
       });
     };
 
+    this.changePw = function (pw) {
+      var params = {
+        password: pw.password,
+        new_password: pw.new_password
+      };
+
+      HEROKU.CONFIG.headers["Access-Token"] = $cookies.get('sessionToken');
+
+      $http({
+
+        method: 'PUT',
+        url: endpoint + 'users/password',
+        headers: HEROKU.CONFIG.headers,
+        params: params
+
+      }).success( function (data) {
+        console.log(data);
+      });
+    };
+
 
 
   }]);

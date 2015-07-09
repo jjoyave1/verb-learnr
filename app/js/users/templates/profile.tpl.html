@@ -31,6 +31,8 @@
         <label>User Image</label><input placeholder="{{ 'avatarURL' }}" type = "text" class="prof-input" id="prof-avatar"disabled ng-model="user.avatar">
       </md-input-container><!-- {{ currentUser.$$state.value.avatar }} -->
 
+      <span class="edit-profile" ng-click="showPasswordSheet($event)">Change Password</span>
+
       <md-button class="md-accent md-hue-3 md-raised prof-submit" id="prof-submit" disabled>Change Profile Info</md-button>
 
       <span id="edit-toggle" class="edit-profile" ng-click="enableInputs()">Edit Profile</span>
