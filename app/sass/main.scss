@@ -152,6 +152,11 @@ body {
   }
 }
 
+.delete-sheet {
+  @include span-columns(8);
+  @include shift(2);
+}
+
 //
 //
 //

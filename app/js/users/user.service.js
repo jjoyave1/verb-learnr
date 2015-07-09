@@ -4,7 +4,10 @@
 
   angular.module('Unoverb')
 
-    .service('UserService', ['$http', 'HEROKU', '$location', '$cookies', '$state', '$q', function ($http, HEROKU, $location, $cookies, $state, $q) {
+    .service('UserService', ['$http', 'HEROKU', '$location', '$cookies', '$state', '$q',
+
+      function ($http, HEROKU, $location, $cookies, $state, $q) {
+
 
     var endpoint = HEROKU.URL;
 
@@ -105,6 +108,7 @@
 
       var deferred = $q.defer();
       HEROKU.CONFIG.headers["Access-Token"] = $cookies.get('sessionToken');
+
       $http.get(endpoint + 'users/profile', HEROKU.CONFIG).then( function (res) {
 
         return deferred.resolve(res.data);
@@ -118,14 +122,24 @@
 
       HEROKU.CONFIG.headers["Access-Token"] = $cookies.get('sessionToken');
 
-      $http.put(HEROKU.URL + 'users/profile', user, HEROKU.CONFIG)
+      $http.put(endpoint + 'users/profile', user, HEROKU.CONFIG)
         .success( function (data) {
           console.log(data);
         });
 
     };
 
-    this.deleteProfile = function(user) {};
+    this.deleteProfile = function(user) {
+
+      HEROKU.CONFIG.headers["Access-Token"] = $cookies.get('sessionToken');
+
+      console.log(user);
+
+      $http.delete(endpoint + 'users/delete', user, HEROKU.CONFIG).success( function (data) {
+        console.log(data);
+      });
+    };
+
 
 
   }]);

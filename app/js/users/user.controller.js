@@ -4,9 +4,9 @@
 
   angular.module('Unoverb')
 
-    .controller('User', ['$scope', '$http', 'UserService', 'HEROKU', '$location', '$cookies', '$mdToast', '$q',
+    .controller('User', ['$scope', '$http', 'UserService', 'HEROKU', '$location', '$cookies', '$mdToast', '$q', '$mdBottomSheet', '$state',
 
-      function ($scope, $http, UserService, HEROKU, $location, $cookies, $mdToast, $q) {
+      function ($scope, $http, UserService, HEROKU, $location, $cookies, $mdToast, $q, $mdBottomSheet, $state) {
 
       var User = function(options) {
 
@@ -49,6 +49,27 @@
       };
 
 
+
+///
+/// LOGIN ACCORDION FUNCTIONS
+///
+      $scope.regSlide = function () {
+        $('#reg-card').slideDown(500);
+        $('#login-card').slideUp(500);
+      };
+
+      $scope.loginSlide = function () {
+        $('#login-card').slideDown(500);
+        $('#reg-card').slideUp(500);
+      };
+///
+///
+///
+
+///
+/// PROFILE HANDLERS
+///
+
       $scope.getProfile = function () {
 
         UserService.userProfile()
@@ -75,25 +96,25 @@
 
       };
 
-///
-/// LOGIN ACCORDION FUNCTIONS
-///
-      $scope.regSlide = function () {
-        $('#reg-card').slideDown(500);
-        $('#login-card').slideUp(500);
+      $scope.showDeleteSheet = function ($event) {
+        $mdBottomSheet.show({
+          templateUrl : "js/users/templates/deletesheet.tpl.html",
+          targetEvent : $event
+        });
       };
 
-      $scope.loginSlide = function () {
-        $('#login-card').slideDown(500);
-        $('#reg-card').slideUp(500);
-      };
-///
-///
-///
+      $scope.deleteUser = function(pw) {
 
-///
-/// PROFILE HANDLERS
-///
+        // console.log("ayy");
+
+        UserService.deleteProfile(pw);
+
+        // HEROKU.CONFIG.headers["Access-Token"] = "";
+
+        // $cookies.remove('sessionToken');
+
+        $state.go('login');
+      };
 
       $scope.enableInputs = function () {
         $('#prof-firstname').prop('disabled', false);

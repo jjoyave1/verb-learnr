@@ -1,0 +1,16 @@
+<md-bottom-sheet class="md-padding md-has-header delete-sheet">
+  <md-subheader>Delete User</md-subheader>
+
+  <md-content ng-controller="User">
+    <p> You are currently logged in as {{ currentUser.$$state.value.username }}.  Enter password to proceed with deleting your account.  (you will be directed to login page)</p>
+
+    <form ng-submit="deleteUser(user)">
+      <md-input-container>
+        <label>Enter Password</label><input type="password" ng-model="user.password">
+      </md-input-container>
+
+      <md-button class="md-accent md-hue-2 md-raised">SUBMIT TO DELETE USER</md-button>
+    </form>
+  </md-content>
+
+</md-bottom-sheet>
