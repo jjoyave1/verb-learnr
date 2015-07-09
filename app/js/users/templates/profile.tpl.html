@@ -6,12 +6,40 @@
     </div>
   </md-toolbar>
 
-  <md-content class ="profile-content">
-    <p>{{ currentUser.$$state.value.username }}</p>
-    <p>{{ currentUser.$$state.value.first_name }} {{ currentUser.$$state.value.last_name }}</p>
-    <p>{{ currentUser.$$state.value.email }}</p>
-    <p><!-- {{ currentUser.$$state.value.avatar }} --> avatar</p>
+  <md-content class ="prof-content">
 
+    <form ng-submit="updateProfile(user)">
+
+      <md-input-container>
+        <label>Username (fixed)</label><input placeholder="{{ currentUser.$$state.value.username }}" type = "text" class="prof-input" disabled ng-model="user.username">
+      </md-input-container>
+
+      <md-input-container>
+        <label>First Name</label><input placeholder="{{ currentUser.$$state.value.first_name }}" type = "text" class="prof-input" id="prof-firstname"disabled ng-model="user.first_name">
+      </md-input-container>
+
+      <md-input-container>
+        <label>Last Name</label><input placeholder="{{ currentUser.$$state.value.last_name }}" type="text" class="prof-input" id="prof-lastname"disabled ng-model="user.last_name">
+      </md-input-container>
+
+      <md-input-container>
+        <label>Email</label><input placeholder="{{ currentUser.$$state.value.email }}" type = "text" class="prof-input" id="prof-email"disabled ng-model="user.email">
+      </md-input-container>
+
+
+      <md-input-container>
+        <label>User Image</label><input placeholder="{{ 'avatarURL' }}" type = "text" class="prof-input" id="prof-avatar"disabled ng-model="user.avatar">
+      </md-input-container><!-- {{ currentUser.$$state.value.avatar }} -->
+
+      <md-button class="md-accent md-hue-3 md-raised prof-submit" id="prof-submit" disabled>Change Profile Info</md-button>
+
+      <span id="edit-toggle" class="edit-profile" ng-click="enableInputs()">Edit Profile</span>
+
+      <span class="delete-profile" ng-click="deleteProfile()">Delete Profile</span>
+
+    </form>
+
+    <!-- <p> add instr text here if needed </p> -->
 
   </md-content>
 </div>

@@ -40,10 +40,7 @@
     var _successLog = function (data) {
 
       $cookies.put('sessionToken', data.access_token);
-      $cookies.put('username', data.username);
-      // $cookies.put('full_name', data.first_name + " " + data.last_name);
-      // $cookies.put('email', data.email);
-      // $cookies.put('password', data.password);
+      // $cookies.put('username', data.username);
 
       $location.path('/dashboard');
 
@@ -116,6 +113,19 @@
 
       return deferred.promise;
     };
+
+    this.editProfile = function (user) {
+
+      HEROKU.CONFIG.headers["Access-Token"] = $cookies.get('sessionToken');
+
+      $http.put(HEROKU.URL + 'users/profile', user, HEROKU.CONFIG)
+        .success( function (data) {
+          console.log(data);
+        });
+
+    };
+
+    this.deleteProfile = function(user) {};
 
 
   }]);

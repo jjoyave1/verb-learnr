@@ -55,15 +55,25 @@
         .then( function (data) {
           return data;
         });
-
-        console.log($scope.currentUser);
       };
 
-      $scope.currentUser =
-        UserService.userProfile()
-        .then( function (data) {
-          return data;
+      $scope.currentUser = UserService.userProfile().then( function (data) { return data; });
+
+      $scope.updateProfile = function (x) {
+
+        var user = new User({
+
+          username : x.username,
+          first_name : x.first_name,
+          last_name : x.last_name,
+          email : x.email,
+          password : x.password
+
         });
+
+        UserService.editProfile(user);
+
+      };
 
 ///
 /// LOGIN ACCORDION FUNCTIONS
@@ -77,6 +87,22 @@
         $('#login-card').slideDown(500);
         $('#reg-card').slideUp(500);
       };
+///
+///
+///
+
+///
+/// PROFILE HANDLERS
+///
+
+      $scope.enableInputs = function () {
+        $('#prof-firstname').prop('disabled', false);
+        $('#prof-lastname').prop('disabled', false);
+        $('#prof-email').prop('disabled', false);
+        $('#prof-avatar').prop('disabled', false);
+        $('#prof-submit').prop('disabled', false);
+      };
+
 ///
 ///
 ///
