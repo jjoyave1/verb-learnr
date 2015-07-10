@@ -150,6 +150,17 @@ body {
     text-decoration: underline;
     cursor: pointer;
   }
+  .edit-password {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    margin-left: 1.2rem;
+  }
+
+  .edit-password:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
 }
 
 .delete-sheet {

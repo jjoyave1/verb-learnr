@@ -1,4 +1,4 @@
-<div layout="column" layout-align="center center" class="md-whiteframe-z2 profile-wrap">
+<div layout="column" layout-align="center center" class="md-whiteframe-z2 profile-wrap" style="margin-bottom: 8rem;">
 
   <md-toolbar>
     <div class="md-toolbar-tools profile-head profile-headers" id="profile-head">
@@ -9,6 +9,9 @@
   <md-content class ="prof-content">
 
     <form ng-submit="updateProfile(user)">
+
+      <!-- <img src="{{ currentUser.$$state.value.avatar }}"> -->
+
 
       <md-input-container>
         <label>Username (fixed)</label><input placeholder="{{ currentUser.$$state.value.username }}" type = "text" class="prof-input" disabled ng-model="user.username">
@@ -28,16 +31,17 @@
 
 
       <md-input-container>
-        <label>User Image</label><input placeholder="{{ 'avatarURL' }}" type = "text" class="prof-input" id="prof-avatar"disabled ng-model="user.avatar">
+        <label>User Image</label><input placeholder="{{ 'avatarURL' }}" type = "text" name="userAvatar" class="prof-input" id="prof-avatar"disabled ng-model="user.avatar">
       </md-input-container><!-- {{ currentUser.$$state.value.avatar }} -->
 
-      <span class="edit-profile" ng-click="showPasswordSheet($event)">Change Password</span>
 
       <md-button class="md-accent md-hue-3 md-raised prof-submit" id="prof-submit" disabled>Change Profile Info</md-button>
 
-      <span id="edit-toggle" class="edit-profile" ng-click="enableInputs()">Edit Profile</span>
+      <span id="edit-toggle" class="edit-profile" ng-click="enableInputs()" flex>Edit Profile</span>
 
-      <span class="delete-profile" ng-click="showDeleteSheet($event)">Delete Profile</span>
+      <span class="delete-profile" ng-click="showDeleteSheet($event)" flex>Delete Profile</span>
+
+      <span class="edit-password" ng-click="showPasswordSheet($event)" flex>Change Password</span>
 
     </form>
 

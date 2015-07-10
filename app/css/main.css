@@ -112,6 +112,14 @@ body {
   .prof-content .delete-profile:hover {
     text-decoration: underline;
     cursor: pointer; }
+  .prof-content .edit-password {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    margin-left: 1.2rem; }
+  .prof-content .edit-password:hover {
+    text-decoration: underline;
+    cursor: pointer; }
 
 .delete-sheet {
   float: left;

@@ -46,7 +46,7 @@
       $cookies.put('sessionToken', data.access_token);
       // $cookies.put('username', data.username);
 
-      $location.path('/dashboard');
+      // $location.path('/dashboard');
 
     };
 
