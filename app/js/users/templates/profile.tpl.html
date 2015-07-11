@@ -10,9 +10,6 @@
 
     <form ng-submit="updateProfile(user)">
 
-      <!-- <img src="{{ currentUser.$$state.value.avatar }}"> -->
-
-
       <md-input-container>
         <label>Username (fixed)</label><input placeholder="{{ currentUser.$$state.value.username }}" type = "text" class="prof-input" disabled ng-model="user.username">
       </md-input-container>
@@ -32,6 +29,11 @@
 
       <md-input-container>
         <label>User Image</label><input placeholder="{{ 'avatarURL' }}" type = "text" name="userAvatar" class="prof-input" id="prof-avatar"disabled ng-model="user.avatar">
+
+        <span>
+          <img src="{{ currentUser.$$state.value.avatar }}">
+        </span>
+
       </md-input-container><!-- {{ currentUser.$$state.value.avatar }} -->
 
 
