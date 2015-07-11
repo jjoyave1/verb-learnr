@@ -132,12 +132,8 @@ body {
       padding: 1px;
       overflow: hidden; }
 
-.prof-fab-wrap {
-  float: left;
-  height: 70px;
-  display: inline-block;
-  width: 100%;
-  overflow-y: hidden; }
+md-fab-toolbar.md-fab-toolbar-wrapper {
+  height: 4rem; }
 
 .delete-sheet {
   float: left;

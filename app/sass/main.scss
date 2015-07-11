@@ -179,12 +179,15 @@ body {
   }
 }
 
-.prof-fab-wrap {
-  float: left;
-  height: 70px;
-  display: inline-block;
-  width: 100%;
-  overflow-y: hidden;
+// .prof-fab-wrap {
+//   float: left;
+//   height: 70px;
+//   width: 100%;
+//   overflow-y: hidden;
+// }
+
+md-fab-toolbar.md-fab-toolbar-wrapper {
+  height: 4rem;
 }
 
 .delete-sheet {

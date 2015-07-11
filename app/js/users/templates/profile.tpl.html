@@ -57,26 +57,29 @@
     <!-- <p> add instr text here if needed </p> -->
 
   </md-content>
-      <div ng-controller="profileFabCtrl" class="prof-fab-wrap prof-buttons">
-        <md-fab-toolbar md-open="profEditBar.isOpen" count="profEditBar.count" ng-class="profEditBar.selectedAlignment">
-          <md-fab-trigger>
-            <md-button aria-label="menu" class="md-fab md-primary">
-              <md-icon md-svg-src="images/0119-user-tie.svg" style="color:white;"></md-icon>
-            </md-button>
-          </md-fab-trigger>
-          <md-toolbar>
-            <md-fab-actions class="md-toolbar-tools">
-              <md-button aria-label="edit profile info" class="md-icon-button">
-                <md-icon md-svg-src="images/0006-pencil.svg" ng-click="enableInputs()" flex></md-icon>
-              </md-button>
-              <md-button aria-label="delete user" class="md-icon-button">
-                <md-icon md-svg-src="images/0277-exit.svg" ng-click="showDeleteSheet($event)" flex></md-icon>
-              </md-button>
-              <md-button aria-label="change user password" class="md-icon-button" ng-click="showPasswordSheet($event)">
-                <md-icon md-svg-src="images/0143-key2.svg" flex></md-icon>
-              </md-button>
-            </md-fab-actions>
-          </md-toolbar>
-        </md-fab-toolbar>
-      </div>
+
+  <!-- TOOLBAR -->
+  <div ng-controller="profileFabCtrl" class="prof-fab-wrap prof-buttons">
+    <md-fab-toolbar md-open="profEditBar.isOpen" count="profEditBar.count" ng-class="profEditBar.selectedAlignment" style="height:4.4rem;overflow:hidden;margin-bottom:0.5rem;">
+      <md-fab-trigger>
+        <md-button aria-label="menu" class="md-fab md-primary">
+          <md-icon md-svg-src="images/0119-user-tie.svg" style="color:white;"></md-icon>
+        </md-button>
+      </md-fab-trigger class="align-with-text">
+      <md-toolbar>
+        <md-fab-actions class="md-toolbar-tools">
+          <md-button aria-label="edit profile info" class="md-icon-button">
+            <md-icon md-svg-src="images/0006-pencil.svg" ng-click="enableInputs()" flex></md-icon>
+          </md-button>
+          <md-button aria-label="delete user" class="md-icon-button">
+            <md-icon md-svg-src="images/0277-exit.svg" ng-click="showDeleteSheet($event)" flex></md-icon>
+          </md-button>
+          <md-button aria-label="change user password" class="md-icon-button" ng-click="showPasswordSheet($event)">
+            <md-icon md-svg-src="images/0143-key2.svg" flex></md-icon>
+          </md-button>
+        </md-fab-actions>
+      </md-toolbar>
+    </md-fab-toolbar>
+  </div>
+
 </div>
