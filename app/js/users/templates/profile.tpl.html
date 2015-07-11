@@ -10,44 +10,73 @@
 
     <form ng-submit="updateProfile(user)">
 
+      <!-- USERNAME FIELD -->
       <md-input-container>
         <label>Username (fixed)</label><input placeholder="{{ currentUser.$$state.value.username }}" type = "text" class="prof-input" disabled ng-model="user.username">
       </md-input-container>
 
+      <!-- FIRSTNAME FIELD -->
       <md-input-container>
         <label>First Name</label><input placeholder="{{ currentUser.$$state.value.first_name }}" type = "text" class="prof-input" id="prof-firstname"disabled ng-model="user.first_name">
       </md-input-container>
 
+      <!-- LASTNAME FIELD -->
       <md-input-container>
         <label>Last Name</label><input placeholder="{{ currentUser.$$state.value.last_name }}" type="text" class="prof-input" id="prof-lastname"disabled ng-model="user.last_name">
       </md-input-container>
 
+      <!-- EMAIL FIELD -->
       <md-input-container>
         <label>Email</label><input placeholder="{{ currentUser.$$state.value.email }}" type = "text" class="prof-input" id="prof-email"disabled ng-model="user.email">
       </md-input-container>
 
-
+      <!-- AVATAR FIELD -->
       <md-input-container>
+
         <label>User Image</label><input placeholder="{{ 'avatarURL' }}" type = "text" name="userAvatar" class="prof-input" id="prof-avatar"disabled ng-model="user.avatar">
 
-        <span>
-          <img src="{{ currentUser.$$state.value.avatar }}">
-        </span>
+        <div class="avatar-wrap">
+          <img class="avatar-img" src="{{ currentUser.$$state.value.avatar }}">
+        </div>
 
       </md-input-container><!-- {{ currentUser.$$state.value.avatar }} -->
 
 
-      <md-button class="md-accent md-hue-3 md-raised prof-submit" id="prof-submit" disabled>Change Profile Info</md-button>
 
-      <span id="edit-toggle" class="edit-profile" ng-click="enableInputs()" flex>Edit Profile</span>
+        <md-button class="md-accent md-hue-3 md-raised prof-submit prof-buttons" id="prof-submit" disabled>Change Profile Info</md-button>
 
-      <span class="delete-profile" ng-click="showDeleteSheet($event)" flex>Delete Profile</span>
+      <!-- <span id="edit-toggle" class="edit-profile" ng-click="enableInputs()" flex>Edit Profile</span> -->
 
-      <span class="edit-password" ng-click="showPasswordSheet($event)" flex>Change Password</span>
+      <!-- <span class="delete-profile">Delete Profile</span> -->
+
+      <!-- <span class="edit-password"  flex>Change Password</span> -->
 
     </form>
+
 
     <!-- <p> add instr text here if needed </p> -->
 
   </md-content>
+      <div ng-controller="profileFabCtrl" class="prof-fab-wrap prof-buttons">
+        <md-fab-toolbar md-open="profEditBar.isOpen" count="profEditBar.count" ng-class="profEditBar.selectedAlignment">
+          <md-fab-trigger class="align-with-text">
+            <md-button aria-label="menu" class="md-fab md-primary">
+              <md-icon md-svg-src="images/0119-user-tie.svg" style="color:white;"></md-icon>
+            </md-button>
+          </md-fab-trigger>
+          <md-toolbar>
+            <md-fab-actions class="md-toolbar-tools">
+              <md-button aria-label="edit profile info" class="md-icon-button">
+                <md-icon md-svg-src="images/0006-pencil.svg" ng-click="enableInputs()" flex></md-icon>
+              </md-button>
+              <md-button aria-label="delete user" class="md-icon-button">
+                <md-icon md-svg-src="images/0277-exit.svg" ng-click="showDeleteSheet($event)" flex></md-icon>
+              </md-button>
+              <md-button aria-label="change user password" class="md-icon-button" ng-click="showPasswordSheet($event)">
+                <md-icon md-svg-src="images/0143-key2.svg" flex></md-icon>
+              </md-button>
+            </md-fab-actions>
+          </md-toolbar>
+        </md-fab-toolbar>
+      </div>
 </div>

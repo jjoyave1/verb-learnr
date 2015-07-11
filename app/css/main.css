@@ -14,6 +14,8 @@ body {
     clear: both;
     content: "";
     display: table; }
+  body .ng-scope {
+    height: 100%; }
 
 .head-nav {
   margin-bottom: 2rem;
@@ -120,6 +122,22 @@ body {
   .prof-content .edit-password:hover {
     text-decoration: underline;
     cursor: pointer; }
+  .prof-content .avatar-wrap {
+    margin-left: 46.5%; }
+    .prof-content .avatar-wrap .avatar-img {
+      border-radius: 50%;
+      text-align: center;
+      margin: 0 auto;
+      border: solid 2px grey;
+      padding: 1px;
+      overflow: hidden; }
+
+.prof-fab-wrap {
+  float: left;
+  height: 70px;
+  display: inline-block;
+  width: 100%;
+  overflow-y: hidden; }
 
 .delete-sheet {
   float: left;

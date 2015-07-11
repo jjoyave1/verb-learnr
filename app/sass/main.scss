@@ -3,6 +3,9 @@
 
 body {
   @include outer-container(100%);
+  .ng-scope {
+    height: 100%;
+  }
 }
 
 //
@@ -161,6 +164,27 @@ body {
     text-decoration: underline;
     cursor: pointer;
   }
+
+  .avatar-wrap {
+    margin-left: 46.5%;
+
+    .avatar-img {
+      border-radius: 50%;
+      text-align: center;
+      margin: 0 auto;
+      border: solid 2px grey;
+      padding: 1px;
+      overflow: hidden;
+    }
+  }
+}
+
+.prof-fab-wrap {
+  float: left;
+  height: 70px;
+  display: inline-block;
+  width: 100%;
+  overflow-y: hidden;
 }
 
 .delete-sheet {
