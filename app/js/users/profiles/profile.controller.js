@@ -26,6 +26,7 @@
 
         UserService.userProfile()
         .then( function (data) {
+          $location.path = data.username;
           return data;
         });
       };
