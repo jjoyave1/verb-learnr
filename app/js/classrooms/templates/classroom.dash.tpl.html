@@ -1,0 +1,45 @@
+<md-toolbar>
+  <div class="md-toolbar-tools" id="create-class-head">
+    <h2>Create Class</h2>
+  </div>
+</md-toolbar>
+
+<md-content md-primary layout-padding layout="row" layout-sm="column" id="class-card" class="class-card">
+
+
+  <form ng-submit="startClass(class)" id="create-class-form" class="create-class-form">
+
+    <div class="row" style="display: inline-block;">
+      <md-input-container>
+        <label>Name</label>
+        <input ng-model="class.name" class="reg-input">
+      </md-input-container>
+
+      <md-input-container>
+        <label>Description</label>
+        <input ng-model="class.description" type="text" class="reg-input">
+      </md-input-container>
+
+      <p>Enter a short description of the class.</p>
+
+    </div>
+
+    <div class="row" style="display: inline-block;">
+      <md-input-container>
+        <label>Language</label>
+        <input ng-model="class.language" type="text" class="regname-input">
+      </md-input-container>
+
+      <md-input-container>
+        <label>Classroom Photo</label>
+        <input ng-model="class.avatar" type="text" class="regname-input">
+      </md-input-container>
+    </div>
+
+    <br>
+
+    <md-button class="md-accent md-hue-3 md-raised reg-submit">Submit</md-button>
+
+  </form>
+
+</md-content>

@@ -41,7 +41,19 @@
       .state('dashboard', {
         url: '/dashboard',
         templateUrl: "js/users/templates/dash.tpl.html"
-      });
+      })
+
+      .state('classroomdash', {
+        url: '/createclassroom',
+        templateUrl: "js/classrooms/templates/classroom.dash.tpl.html",
+        controller: "Classroom"
+      })
+
+      .state('classroomtable', {
+        url: '/classrooms',
+        templateUrl: "js/classrooms/templates/classroom.table.tpl.html",
+        controller: "ClassroomTable"
+      })
 
   })
 

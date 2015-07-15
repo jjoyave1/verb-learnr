@@ -24,11 +24,7 @@
 
       $scope.getProfile = function () {
 
-        UserService.userProfile()
-        .then( function (data) {
-          $location.path = data.username;
-          return data;
-        });
+        UserService.userProfile();
       };
 
       $scope.currentUser = UserService.userProfile().then( function (data) { return data; });

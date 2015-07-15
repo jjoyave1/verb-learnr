@@ -20,6 +20,8 @@
         <div class="links" ng-controller="User">
           <a href="/#/login">Login</a> &bull;
           <a href="/#/profile" ng-click="getProfile()" style="outline:none;">Profile</a> &bull; <!--  need to add :id to url -->
+          <a href="/#/createclassroom">Create Classroom</a> &bull;
+          <a href="/#/classrooms">Classrooms</a> &bull;
           <a href="/#/dashboard">Dash</a> &bull;
           <a href="/#/logout" ng-click="logout()">Logout</a>
         </div>
@@ -49,10 +51,14 @@
   <script src="js/main.js"></script>
   <!-- // <script src="js/main.router.js"></script> -->
   <script src="js/users/user.service.js"></script>
+  <script src="js/classrooms/classroom.service.js"></script>
   <script src="js/users/user.controller.js"></script>
   <script src="js/users/profiles/profile.controller.js"></script>
   <script src="js/users/profiles/profile.fab.controller.js"></script>
+  <script src="js/classrooms/classroom.controller.js"></script>
+  <script src="js/classrooms/classroom.table.controller.js"></script>
   <script src="js/users/user.directive.js"></script>
+  <script src="js/classrooms/classroom.table.directive.js"></script>
   <!-- // <script src="js/verbs/verb.service.js"></script> -->
   <!-- // <script src="js/verbs/verb.controller.js"></script> -->
   <!-- // <script src="js/verbs/verb.directive.js"></script> -->
