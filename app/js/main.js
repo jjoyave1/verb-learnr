@@ -53,7 +53,7 @@
         url: '/classrooms',
         templateUrl: "js/classrooms/templates/classroom.table.tpl.html",
         controller: "ClassroomTable"
-      })
+      });
 
   })
 

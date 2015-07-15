@@ -179,13 +179,7 @@ body {
   }
 }
 
-// .prof-fab-wrap {
-//   float: left;
-//   height: 70px;
-//   width: 100%;
-//   overflow-y: hidden;
-// }
-
+//fab bar styling
 md-fab-toolbar.md-fab-toolbar-wrapper {
   height: 4rem;
 }
@@ -193,6 +187,50 @@ md-fab-toolbar.md-fab-toolbar-wrapper {
 .delete-sheet {
   @include span-columns(8);
   @include shift(2);
+}
+
+//
+//
+//
+
+
+//
+// CLASSROOM TABLE STYLE
+//
+
+.classroom-table-head {
+  border-bottom: solid 9px brown;
+}
+.switch-options {
+  color: inherit;
+}
+.md-table-headers-row {
+  width: 25%;
+  display: inline-block;
+}
+
+.md-table-header {
+  border-bottom: 1px solid rgb(230,230,230);
+  color: rgb(130,130,130);
+  text-align: left;
+  font-size: 0.75em;
+  font-weight: 700;
+  padding: 16px 7rem 16px 5rem;
+}
+
+.md-table-header a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.md-table-header a:hover {
+  text-decoration: underline;
+}
+
+.md-table tbody tr:hover, .md-table tbody tr:focus {
+  cursor: pointer;
+  background-color:rgba(63,81,181,0.2);
+  width: 25%;
 }
 
 //

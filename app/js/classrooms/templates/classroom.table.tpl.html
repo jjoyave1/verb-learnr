@@ -1,1 +1,20 @@
+<md-toolbar>
+  <div class="md-toolbar-tools classroom-table-head" id="classroom-table-head">
+    <h2>Current Classrooms</h2>
+  <div class="class-switch-wrap">
 
+    <md-switch id = "classroom-search-switch" ng-model="searchByParam.val1" class="switch-row" ng-click="setSearchParam()">
+    Sort By {{ classSearchParam }}
+    </md-switch>
+
+</div>
+  </div>
+</md-toolbar>
+
+<table class="md-table">
+  <thead>
+    <tr class = "md-table-headers-row" ng-repeat="h in headers">
+      <th class = "md-table-header"><a href="#">{{h.name}}</a></th>
+    </tr>
+  </thead>
+</table>

@@ -27,13 +27,38 @@
     ];
 
     $scope.getClassroomTable = function () {
+      var params = {
+        sort_by : $scope.classSearchParam,
+        language : 'spanish',
+        page : $scope.pagecount
+      };
+
+      ClassroomService.getClassrooms(params).success( function (data) {
+        console.log(data);
+        $scope.classroomList = data;
+        return $scope.classroomList;
+      });
     };
 
     $scope.custom = {name: 'bold', description:'grey',last_modified: 'grey'};
     $scope.sortable = ['name', 'description', 'last_modified'];
 
-    //sets count displayed in table
-    $scope.count = 3;
+    // set switch handlers
+
+    // $scope.searchByParam = {val1:false};
+
+    $scope.setSearchParam = function () {
+      // console.log($('#classroom-search-switch'));
+      // if ($('#classroom-search-switch').val() === true) {
+      //   $scope.classSearchParam = "new";
+      // } else {
+      //   $scope.classSearchParam = "top";
+      // }
+    };
+
+    $scope.classSearchParam = "top";
+    $scope.pageCount = 1;
+
   }]);
 
 
@@ -43,5 +68,5 @@
   //     return input.slice(start);
   //   }
   // });
-
+  $scope.getClassroomTable();
 }());

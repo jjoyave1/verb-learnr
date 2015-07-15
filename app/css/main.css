@@ -143,3 +143,33 @@ md-fab-toolbar.md-fab-toolbar-wrapper {
   margin-left: 17.05961%; }
   .delete-sheet:last-child {
     margin-right: 0; }
+
+.classroom-table-head {
+  border-bottom: solid 9px brown; }
+
+.switch-options {
+  color: inherit; }
+
+.md-table-headers-row {
+  width: 25%;
+  display: inline-block; }
+
+.md-table-header {
+  border-bottom: 1px solid #e6e6e6;
+  color: #828282;
+  text-align: left;
+  font-size: 0.75em;
+  font-weight: 700;
+  padding: 16px 7rem 16px 5rem; }
+
+.md-table-header a {
+  text-decoration: none;
+  color: inherit; }
+
+.md-table-header a:hover {
+  text-decoration: underline; }
+
+.md-table tbody tr:hover, .md-table tbody tr:focus {
+  cursor: pointer;
+  background-color: rgba(63, 81, 181, 0.2);
+  width: 25%; }
