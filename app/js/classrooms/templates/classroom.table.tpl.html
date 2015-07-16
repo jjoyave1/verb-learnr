@@ -17,4 +17,18 @@
       <th class = "md-table-header"><a href="#">{{h.name}}</a></th>
     </tr>
   </thead>
+  <tbody>
+
+    <div ng-repeat="x in classroomTable">
+      <div style="display: inline-block;width:20%;">{{ x.$$state.value.name }}</div>
+      <div style="display: inline-block;width:20%;">{{ x.$$state.value.description }}</div>
+      <div style="display: inline-block;width:20%;">{{ x.$$state.value.avatar }}</div>
+      <div style="display: inline-block;width:20%;">{{ x.$$state.value.language }}</div>
+      <div style="display: inline-block;width:20%;">{{ x.$$state.value.num_participants }}</div>
+    </div>
+
+  </tbody>
+
 </table>
+
+

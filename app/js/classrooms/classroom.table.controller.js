@@ -4,7 +4,7 @@
 
   angular.module('Unoverb')
 
-  .controller('ClassroomTable', ['$scope', 'ClassroomService', function ($scope, ClassroomService) {
+  .controller('ClassroomTable', ['$scope', 'ClassroomService','$q', function ($scope, ClassroomService, $q) {
 
     $scope.toggleSearch = false;
     $scope.headers = [
@@ -23,29 +23,21 @@
       {
         name: 'Language',
         field: 'language'
+      },
+      {
+        name: 'Members',
+        field: 'num_participants'
       }
     ];
 
-    $scope.getClassroomTable = function () {
-      var params = {
-        sort_by : $scope.classSearchParam,
-        language : 'spanish',
-        page : $scope.pagecount
-      };
-
-      ClassroomService.getClassrooms(params).success( function (data) {
-        console.log(data);
-        $scope.classroomList = data;
-        return $scope.classroomList;
-      });
-    };
+    $scope.classroomTable = ClassroomService.getClassrooms();
+    console.log($scope.classroomTable);
 
     $scope.custom = {name: 'bold', description:'grey',last_modified: 'grey'};
     $scope.sortable = ['name', 'description', 'last_modified'];
 
-    // set switch handlers
-
-    // $scope.searchByParam = {val1:false};
+    $scope.classSearchParam = "top";
+    $scope.pageCount = 1;
 
     $scope.setSearchParam = function () {
       // console.log($('#classroom-search-switch'));
@@ -56,9 +48,6 @@
       // }
     };
 
-    $scope.classSearchParam = "top";
-    $scope.pageCount = 1;
-
   }]);
 
 
@@ -68,5 +57,4 @@
   //     return input.slice(start);
   //   }
   // });
-  $scope.getClassroomTable();
 }());

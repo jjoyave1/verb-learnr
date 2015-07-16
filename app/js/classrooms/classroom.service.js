@@ -25,12 +25,22 @@
       });
     };
 
-    this.getClassrooms = function (params) {
+    this.getClassrooms = function () {
+
+      var deferred = $q.defer();
+      var params = {sort_by : "top", language : "spanish" };
       $http({
+
         method: 'GET',
         url: endpoint + 'classrooms',
         params: params
+
+      }).then( function (res) {
+        return deferred.resolve(res.data);
       });
+
+      // console.log(deferred.promise);
+      return deferred.promise;
     };
 
 
