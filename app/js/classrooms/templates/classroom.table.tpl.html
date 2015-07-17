@@ -1,3 +1,5 @@
+<div layout="column" layout-align="center center" class="md-whiteframe-z2 classroom-table-wrap" style="margin-bottom: 8rem;">
+
 <md-toolbar>
   <div class="md-toolbar-tools classroom-table-head" id="classroom-table-head">
     <h2>Current Classrooms</h2>
@@ -17,18 +19,29 @@
       <th class = "md-table-header"><a href="#">{{h.name}}</a></th>
     </tr>
   </thead>
+
   <tbody>
-
-    <div ng-repeat="x in classroomTable">
-      <div style="display: inline-block;width:20%;">{{ x.$$state.value.name }}</div>
-      <div style="display: inline-block;width:20%;">{{ x.$$state.value.description }}</div>
-      <div style="display: inline-block;width:20%;">{{ x.$$state.value.avatar }}</div>
-      <div style="display: inline-block;width:20%;">{{ x.$$state.value.language }}</div>
-      <div style="display: inline-block;width:20%;">{{ x.$$state.value.num_participants }}</div>
-    </div>
-
+    <tr>
+      <td>
+        <a ng-repeat="x in classroomTable" href="#/classrooms/{{x.id}}" class="class-table-row-wrap">
+          <div class = "class-table-row">
+            <div class="table-cell">
+              <img src="{{ x.avatar }}" class="table-avatar">
+            </div>
+            <div class="table-cell table-text">{{ x.name }}</div>
+            <div class="table-cell table-text">{{ x.description }}</div>
+            <div class="table-cell table-text">{{ x.language }}</div>
+            <div class="table-cell table-text">{{ x.num_participants }}</div>
+          </div>
+        </a>
+      </td>
+    </tr>
   </tbody>
 
 </table>
+
+<!-- <a href="#" ng-click="getExercise()">create exercise</a> -->
+
+</div>
 
 

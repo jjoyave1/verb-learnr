@@ -25,23 +25,33 @@
       });
     };
 
-    this.getClassrooms = function () {
+    this.getClassroomTable = function () {
 
-      var deferred = $q.defer();
       var params = {sort_by : "top", language : "spanish" };
-      $http({
+      return $http({
 
         method: 'GET',
         url: endpoint + 'classrooms',
         params: params
 
-      }).then( function (res) {
-        return deferred.resolve(res.data);
       });
-
-      // console.log(deferred.promise);
-      return deferred.promise;
     };
+
+    this.getSingleClassroom = function (id) {
+      if ($cookies.sessionToken !== 0) {
+
+        HEROKU.CONFIG.headers["Access-Token"] = $cookies.get('sessionToken');
+
+        return $http({
+
+          method: 'GET',
+          url: endpoint + 'classrooms/' + id,
+          headers: HEROKU.CONFIG.headers
+
+        });
+      }
+    };
+
 
 
   }]);

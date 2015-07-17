@@ -1,0 +1,19 @@
+<div layout="column" layout-align="center center" class="md-whiteframe-z2 classroom-table-wrap" style="margin-bottom: 8rem;">
+
+  <md-toolbar>
+    <div class="md-toolbar-tools" id="create-class-head">
+      <h2>Class {{singleClassroomData.name}}</h2>
+    </div>
+  </md-toolbar>
+
+  <md-list>
+    <md-list-item><img src="{{singleClassroomData.avatar}}"></md-list-item>
+    <md-list-item>Classroom ID: {{singleClassroomData.id}}</md-list-item>
+    <md-list-item>Classroom Name: {{singleClassroomData.name}}</md-list-item>
+    <md-list-item>Info: {{singleClassroomData.description}}</md-list-item>
+    <md-list-item>Language: {{singleClassroomData.language}}</md-list-item>
+    <md-list-item>Students: {{singleClassroomData.num_students}}</md-list-item>
+    <md-list-item ng-repeat="x in students">{{ x.username }}</md-list-item>
+    <md-list-item ng-repeat="y in teachers">Instructor(s): {{ y.username }}</md-list-item>
+  </md-list>
+</div>

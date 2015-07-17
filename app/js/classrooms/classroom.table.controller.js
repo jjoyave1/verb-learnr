@@ -4,7 +4,7 @@
 
   angular.module('Unoverb')
 
-  .controller('ClassroomTable', ['$scope', 'ClassroomService','$q', function ($scope, ClassroomService, $q) {
+  .controller('ClassroomTable', ['$scope', 'ClassroomService','$q', 'ExerciseService', function ($scope, ClassroomService, $q, ExerciseService) {
 
     $scope.toggleSearch = false;
     $scope.headers = [
@@ -30,8 +30,12 @@
       }
     ];
 
-    $scope.classroomTable = ClassroomService.getClassrooms();
-    console.log($scope.classroomTable);
+    // $scope.classroomTable = ClassroomService.getClassrooms();
+    // console.log($scope.classroomTable);
+
+    ClassroomService.getClassroomTable().then(function(res){
+      $scope.classroomTable = res.data;
+    });
 
     $scope.custom = {name: 'bold', description:'grey',last_modified: 'grey'};
     $scope.sortable = ['name', 'description', 'last_modified'];
@@ -46,6 +50,10 @@
       // } else {
       //   $scope.classSearchParam = "top";
       // }
+    };
+
+    $scope.getExercise = function () {
+      ExerciseService.createExercise();
     };
 
   }]);

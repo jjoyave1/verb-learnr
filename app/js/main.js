@@ -53,6 +53,12 @@
         url: '/classrooms',
         templateUrl: "js/classrooms/templates/classroom.table.tpl.html",
         controller: "ClassroomTable"
+      })
+
+      .state('singleclassroom', {
+        url: '/classrooms/:id',
+        templateUrl: 'js/classrooms/templates/singleclassroom.tpl.html',
+        controller: 'SingleClassroom'
       });
 
   })
@@ -97,7 +103,13 @@
 
           if ($state.current.name === 'login') {
             dashCheck();
-          } else {
+          }
+
+          if ($state.current.name === 'classroomtable') {
+
+          }
+
+          else {
             loginCheck();
           }
 

@@ -144,15 +144,31 @@ md-fab-toolbar.md-fab-toolbar-wrapper {
   .delete-sheet:last-child {
     margin-right: 0; }
 
-.classroom-table-head {
-  border-bottom: solid 9px brown; }
+.classroom-table-wrap {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 82.94039%;
+  margin-left: 8.5298%; }
+  .classroom-table-wrap:last-child {
+    margin-right: 0; }
+  .classroom-table-wrap .classroom-table-head {
+    border-bottom: solid 9px brown; }
+  .classroom-table-wrap .class-table-row-wrap {
+    text-decoration: none;
+    color: inherit; }
+  .classroom-table-wrap .class-table-row {
+    height: 75px; }
+  .classroom-table-wrap .class-table-row:hover {
+    background-color: lightblue; }
 
 .switch-options {
   color: inherit; }
 
 .md-table-headers-row {
   width: 20%;
-  display: inline-block; }
+  display: inline-block;
+  overflow-x: hidden; }
 
 .md-table-header {
   border-bottom: 1px solid #e6e6e6;
@@ -169,7 +185,15 @@ md-fab-toolbar.md-fab-toolbar-wrapper {
 .md-table-header a:hover {
   text-decoration: underline; }
 
-.md-table tbody tr:hover, .md-table tbody tr:focus {
-  cursor: pointer;
-  background-color: rgba(63, 81, 181, 0.2);
-  width: 25%; }
+.table-cell {
+  text-align: center;
+  display: inline-block;
+  width: 19.2%; }
+
+.table-avatar {
+  width: 50px;
+  height: 50px;
+  margin: 4px 1em 4px 4.64em; }
+
+.table-text {
+  line-height: 2em; }

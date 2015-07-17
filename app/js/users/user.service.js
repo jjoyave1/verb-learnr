@@ -111,7 +111,7 @@
       HEROKU.CONFIG.headers["Access-Token"] = $cookies.get('sessionToken');
 
       $http.get(endpoint + 'users/profile', HEROKU.CONFIG).then( function (res) {
-        // console.log(deferred);
+
         return deferred.resolve(res.data);
 
       });
