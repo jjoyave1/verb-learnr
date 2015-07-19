@@ -114,6 +114,7 @@ body {
 .profile-wrap {
   @include span-columns(8);
   @include shift(2);
+  background-color: white;
 
   .profile-headers {
     border-bottom: solid 9px brown;
@@ -258,17 +259,19 @@ md-fab-toolbar.md-fab-toolbar-wrapper {
 .table-cell {
   text-align: center;
   display: inline-block;
-  width: 19.2%;
+  height: 74.240px;
+
+  .table-text {
+    display: inline-block;
+    height: 100%;
+    margin: 0 3rem 0 5.1rem;
+  }
 }
 
 .table-avatar {
   width: 50px;
   height: 50px;
-  margin: 4px 1em 4px 4.64em;
-}
-
-.table-text {
-  line-height: 2em;
+  margin: 6px 1em 4px 4.64em;
 }
 
 //

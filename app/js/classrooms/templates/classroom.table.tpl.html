@@ -25,13 +25,29 @@
       <td>
         <a ng-repeat="x in classroomTable" href="#/classrooms/{{x.id}}" class="class-table-row-wrap">
           <div class = "class-table-row">
-            <div class="table-cell">
-              <img src="{{ x.avatar }}" class="table-avatar">
+
+              <div class="table-cell">
+                <img src="{{ x.avatar }}" class="table-avatar">
+              </div>
+
+              <div class="table-cell">
+                <div class="table-text">
+                  {{ x.name }}<br/><br/>
+                </div>
+
+                <div class="table-text">
+                  {{ x.description }}<br/><br/>
+                </div>
+
+                <div class="table-text">
+                  {{ x.language }}<br/><br/>
+                </div>
+
+                <div class="table-text">
+                  {{ x.num_participants }}<br/><br/>
+                </div>
             </div>
-            <div class="table-cell table-text">{{ x.name }}</div>
-            <div class="table-cell table-text">{{ x.description }}</div>
-            <div class="table-cell table-text">{{ x.language }}</div>
-            <div class="table-cell table-text">{{ x.num_participants }}</div>
+
           </div>
         </a>
       </td>

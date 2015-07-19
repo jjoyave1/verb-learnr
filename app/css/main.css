@@ -92,7 +92,8 @@ body {
   display: block;
   margin-right: 2.35765%;
   width: 65.88078%;
-  margin-left: 17.05961%; }
+  margin-left: 17.05961%;
+  background-color: white; }
   .profile-wrap:last-child {
     margin-right: 0; }
   .profile-wrap .profile-headers {
@@ -202,12 +203,13 @@ md-fab-toolbar.md-fab-toolbar-wrapper {
 .table-cell {
   text-align: center;
   display: inline-block;
-  width: 19.2%; }
+  height: 74.240px; }
+  .table-cell .table-text {
+    display: inline-block;
+    height: 100%;
+    margin: 0 3rem 0 5.1rem; }
 
 .table-avatar {
   width: 50px;
   height: 50px;
-  margin: 4px 1em 4px 4.64em; }
-
-.table-text {
-  line-height: 2em; }
+  margin: 6px 1em 4px 4.64em; }
