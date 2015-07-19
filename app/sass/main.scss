@@ -2,6 +2,9 @@
 @import 'neat/neat';
 
 body {
+  background: url('../images/bright_squares.png');
+  background-repeat: repeat;
+  height: 1000px;
   @include outer-container(100%);
   .ng-scope {
     height: 100%;
@@ -15,6 +18,8 @@ body {
 .head-nav {
   margin-bottom: 2rem;
   border-bottom: solid 9px brown;
+  @include span-columns(8);
+  @include shift(2);
 }
 .links {
   position: absolute;
@@ -32,8 +37,8 @@ body {
 //
 
 .login-wrap {
-  @include span-columns(10);
-  @include shift(1);
+  @include span-columns(8);
+  @include shift(2);
 
   .login-headers {
     border-bottom: solid 9px brown;
@@ -107,8 +112,8 @@ body {
 //
 
 .profile-wrap {
-  @include span-columns(10);
-  @include shift(1);
+  @include span-columns(8);
+  @include shift(2);
 
   .profile-headers {
     border-bottom: solid 9px brown;
@@ -184,6 +189,10 @@ md-fab-toolbar.md-fab-toolbar-wrapper {
   height: 4rem;
 }
 
+.prof-fab-wrap {
+  background-color: white;
+}
+
 .delete-sheet {
   @include span-columns(8);
   @include shift(2);
@@ -199,8 +208,9 @@ md-fab-toolbar.md-fab-toolbar-wrapper {
 //
 
 .classroom-table-wrap {
-  @include span-columns(10);
-  @include shift(1);
+  @include span-columns(8);
+  @include shift(2);
+  background-color: white;
 
   .classroom-table-head {
     border-bottom: solid 9px brown;

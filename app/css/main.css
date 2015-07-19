@@ -7,6 +7,9 @@ html {
   box-sizing: inherit; }
 
 body {
+  background: url("../images/bright_squares.png");
+  background-repeat: repeat;
+  height: 1000px;
   max-width: 100%;
   margin-left: auto;
   margin-right: auto; }
@@ -19,7 +22,14 @@ body {
 
 .head-nav {
   margin-bottom: 2rem;
-  border-bottom: solid 9px brown; }
+  border-bottom: solid 9px brown;
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%;
+  margin-left: 17.05961%; }
+  .head-nav:last-child {
+    margin-right: 0; }
 
 .links {
   position: absolute;
@@ -30,8 +40,8 @@ body {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 82.94039%;
-  margin-left: 8.5298%; }
+  width: 65.88078%;
+  margin-left: 17.05961%; }
   .login-wrap:last-child {
     margin-right: 0; }
   .login-wrap .login-headers {
@@ -81,8 +91,8 @@ body {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 82.94039%;
-  margin-left: 8.5298%; }
+  width: 65.88078%;
+  margin-left: 17.05961%; }
   .profile-wrap:last-child {
     margin-right: 0; }
   .profile-wrap .profile-headers {
@@ -135,6 +145,9 @@ body {
 md-fab-toolbar.md-fab-toolbar-wrapper {
   height: 4rem; }
 
+.prof-fab-wrap {
+  background-color: white; }
+
 .delete-sheet {
   float: left;
   display: block;
@@ -148,8 +161,9 @@ md-fab-toolbar.md-fab-toolbar-wrapper {
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 82.94039%;
-  margin-left: 8.5298%; }
+  width: 65.88078%;
+  margin-left: 17.05961%;
+  background-color: white; }
   .classroom-table-wrap:last-child {
     margin-right: 0; }
   .classroom-table-wrap .classroom-table-head {
