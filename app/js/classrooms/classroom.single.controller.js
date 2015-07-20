@@ -4,7 +4,7 @@
 
   angular.module('Unoverb')
 
-    .controller('SingleClassroom', ['$scope', '$stateParams', 'HEROKU', 'ClassroomService', '$cookies', function ($scope, $stateParams, HEROKU, ClassroomService, $cookies) {
+    .controller('SingleClassroom', ['$scope', '$stateParams', '$state', 'HEROKU', 'ClassroomService', '$cookies', function ($scope, $stateParams, $state, HEROKU, ClassroomService, $cookies) {
 
     var endpoint = HEROKU.URL;
 
@@ -22,6 +22,14 @@
       }
 
     });
+
+    $scope.goToJoinPage = function () {
+      $state.go('joinclassroom');
+    };
+
+    $scope.sendJoinRequest = function (role, message) {
+
+    };
 
   }]);
 

@@ -1,6 +1,12 @@
 @import 'bourbon/bourbon';
 @import 'neat/neat';
 
+//COLORS
+$offwht: #FDFCE9;
+$ltgrey: #B1B1B1;
+
+
+/////////
 body {
   background: url('../images/bright_squares.png');
   background-repeat: repeat;
@@ -203,6 +209,36 @@ md-fab-toolbar.md-fab-toolbar-wrapper {
 //
 //
 
+//
+//  CLASSROOM REG STYLE
+//
+.create-class-head {
+  border-bottom: solid 9px brown;
+}
+
+.create-class-form {
+  margin: 0 auto;
+  margin-top: 2.5rem;
+}
+
+.class-input-block {
+  p {
+    margin: 0 auto;
+    padding: 0;
+    margin-bottom: 1rem;
+    color: $ltgrey;
+    font-size: smaller;
+  }
+}
+
+.class-create-submit {
+  width: 30%;
+  margin-left: 35.5%;
+}
+
+//
+//
+//
 
 //
 // CLASSROOM TABLE STYLE
@@ -264,17 +300,33 @@ md-fab-toolbar.md-fab-toolbar-wrapper {
   .table-text {
     display: inline-block;
     height: 100%;
-    margin: 0 3rem 0 5.1rem;
+    width: 9rem;
+    text-align: center;
   }
 }
 
 .table-avatar {
   width: 50px;
   height: 50px;
-  margin: 6px 1em 4px 4.64em;
+  margin: 6px 4em 4px 4.64em;
 }
 
 //
 //
 //
+
+//
+// Single classroom info style
+//
+
+.class-info-list-wrap {
+  margin: 0 auto;
+  margin-left: 5%;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+
+  .join-class-button {
+    // margin-left: 20%;
+  }
+}
 

@@ -59,6 +59,12 @@
         url: '/classrooms/:id',
         templateUrl: 'js/classrooms/templates/singleclassroom.tpl.html',
         controller: 'SingleClassroom'
+      })
+
+      .state('joinclassroom', {
+        url: '/classrooms/:id',
+        templateUrl: 'js/classrooms/templates/joinclass.tpl.html',
+        controller: 'SingleClassroom'
       });
 
   })

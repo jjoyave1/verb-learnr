@@ -6,14 +6,19 @@
     </div>
   </md-toolbar>
 
-  <md-list>
-    <md-list-item><img src="{{singleClassroomData.avatar}}"></md-list-item>
-    <md-list-item>Classroom ID: {{singleClassroomData.id}}</md-list-item>
-    <md-list-item>Classroom Name: {{singleClassroomData.name}}</md-list-item>
-    <md-list-item>Info: {{singleClassroomData.description}}</md-list-item>
-    <md-list-item>Language: {{singleClassroomData.language}}</md-list-item>
-    <md-list-item>Students: {{singleClassroomData.num_students}}</md-list-item>
-    <md-list-item ng-repeat="x in students">{{ x.username }}</md-list-item>
-    <md-list-item ng-repeat="y in teachers">Instructor(s): {{ y.username }}</md-list-item>
-  </md-list>
+  <div class="class-info-list-wrap">
+    <md-list>
+      <md-list-item><img src="{{singleClassroomData.avatar}}"></md-list-item>
+      <md-list-item>Classroom ID: {{singleClassroomData.id}}</md-list-item>
+      <md-list-item>Classroom Name: {{singleClassroomData.name}}</md-list-item>
+      <md-list-item>Info: {{singleClassroomData.description}}</md-list-item>
+      <md-list-item>Language: {{singleClassroomData.language}}</md-list-item>
+      <md-list-item>Students: {{singleClassroomData.num_students}}</md-list-item>
+      <md-list-item ng-repeat="x in students">{{ x.username }}</md-list-item>
+      <md-list-item ng-repeat="y in teachers">Instructor(s): {{ y.username }}</md-list-item>
+
+      <md-button class="md-accent md-hue-3 md-raised join-class-button" ng-click="goToJoinPage()">Request to Join</md-button>
+
+    </md-list>
+  </div>
 </div>

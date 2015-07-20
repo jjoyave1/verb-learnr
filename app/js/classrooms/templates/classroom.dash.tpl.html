@@ -1,7 +1,7 @@
 <div layout="column" layout-align="center center" class="md-whiteframe-z2 classroom-table-wrap" style="margin-bottom: 8rem;">
 
 <md-toolbar>
-  <div class="md-toolbar-tools" id="create-class-head">
+  <div class="md-toolbar-tools create-class-head" id="create-class-head">
     <h2>Create Class</h2>
   </div>
 </md-toolbar>
@@ -11,7 +11,7 @@
 
   <form ng-submit="startClass(class)" id="create-class-form" class="create-class-form">
 
-    <div class="row" style="display: inline-block;">
+    <div class="row class-input-block" style="display: inline-block;">
       <md-input-container>
         <label>Name</label>
         <input ng-model="class.name" class="reg-input">
@@ -26,7 +26,7 @@
 
     </div>
 
-    <div class="row" style="display: inline-block;">
+    <div class="row class-input-block" flex style="display: inline-block; clear: both;float:right;">
       <md-input-container>
         <label>Language</label>
         <input ng-model="class.language" type="text" class="regname-input">
@@ -40,7 +40,7 @@
 
     <br>
 
-    <md-button class="md-accent md-hue-3 md-raised reg-submit">Submit</md-button>
+    <md-button class="md-accent md-hue-3 md-raised class-create-submit">Submit</md-button>
 
   </form>
 
