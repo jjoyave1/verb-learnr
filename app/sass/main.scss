@@ -26,6 +26,9 @@ body {
   border-bottom: solid 9px brown;
   @include span-columns(8);
   @include shift(2);
+  position: fixed;
+  top: 0;
+  z-index:25;
 }
 .links {
   position: absolute;
@@ -45,6 +48,7 @@ body {
 .login-wrap {
   @include span-columns(8);
   @include shift(2);
+  margin-top: 7rem;
 
   .login-headers {
     border-bottom: solid 9px brown;
@@ -121,6 +125,7 @@ body {
   @include span-columns(8);
   @include shift(2);
   background-color: white;
+  margin-top: 7rem;
 
 }
 
@@ -243,6 +248,7 @@ md-fab-toolbar.md-fab-toolbar-wrapper {
 //
 //  CLASSROOM REG STYLE
 //
+
 .create-class-head {
   border-bottom: solid 9px brown;
 }
@@ -279,6 +285,7 @@ md-fab-toolbar.md-fab-toolbar-wrapper {
   @include span-columns(8);
   @include shift(2);
   background-color: white;
+  margin-top: 7rem;
 
   .classroom-table-head {
     border-bottom: solid 9px brown;
@@ -353,11 +360,86 @@ md-fab-toolbar.md-fab-toolbar-wrapper {
 .class-info-list-wrap {
   margin: 0 auto;
   margin-left: 5%;
-  margin-top: 2.5rem;
+  margin-top: 7rem;
   margin-bottom: 2.5rem;
 
   .join-class-button {
     // margin-left: 20%;
   }
 }
+
+.exercise-table-wrap {
+  @include span-columns(8);
+  @include shift(2);
+
+  .exercises-head {
+    border-bottom: solid 9px brown;
+  }
+
+  form {
+    margin-left: 5%;
+    margin-bottom: 2rem;
+  }
+}
+//
+//
+//
+
+//
+//  Send join request page
+//
+
+
+//
+//
+//
+
+//
+// Join Requests info page style
+//
+
+.join-requests-wrap {
+  @include span-columns(8);
+  @include shift(2);
+  background-color: white;
+  margin-top: 7rem;
+
+  .join-requests-head {
+    border-bottom: solid 9px brown;
+  }
+
+  .join-request-info {
+
+    b {
+      width: 13%;
+      display: inline-block;
+    }
+
+    .bb {
+      border-right: solid 1px $ltgrey;
+    }
+
+    .bbb {
+      margin-left: 1rem;
+    }
+
+    .b-email {
+      padding-right: 8rem;
+    }
+    p {
+      width: 13%;
+      margin-right: 7%;
+      text-align: center;
+    }
+  }
+
+  .request-res-button {
+    font-size: 10px;
+  }
+}
+
+
+//
+//
+//
 

@@ -27,7 +27,10 @@ body {
   display: block;
   margin-right: 2.35765%;
   width: 65.88078%;
-  margin-left: 17.05961%; }
+  margin-left: 17.05961%;
+  position: fixed;
+  top: 0;
+  z-index: 25; }
   .head-nav:last-child {
     margin-right: 0; }
 
@@ -41,7 +44,8 @@ body {
   display: block;
   margin-right: 2.35765%;
   width: 65.88078%;
-  margin-left: 17.05961%; }
+  margin-left: 17.05961%;
+  margin-top: 7rem; }
   .login-wrap:last-child {
     margin-right: 0; }
   .login-wrap .login-headers {
@@ -93,7 +97,8 @@ body {
   margin-right: 2.35765%;
   width: 65.88078%;
   margin-left: 17.05961%;
-  background-color: white; }
+  background-color: white;
+  margin-top: 7rem; }
   .profile-wrap:last-child {
     margin-right: 0; }
 
@@ -226,7 +231,8 @@ md-fab-toolbar.md-fab-toolbar-wrapper {
   margin-right: 2.35765%;
   width: 65.88078%;
   margin-left: 17.05961%;
-  background-color: white; }
+  background-color: white;
+  margin-top: 7rem; }
   .classroom-table-wrap:last-child {
     margin-right: 0; }
   .classroom-table-wrap .classroom-table-head {
@@ -280,5 +286,47 @@ md-fab-toolbar.md-fab-toolbar-wrapper {
 .class-info-list-wrap {
   margin: 0 auto;
   margin-left: 5%;
-  margin-top: 2.5rem;
+  margin-top: 7rem;
   margin-bottom: 2.5rem; }
+
+.exercise-table-wrap {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%;
+  margin-left: 17.05961%; }
+  .exercise-table-wrap:last-child {
+    margin-right: 0; }
+  .exercise-table-wrap .exercises-head {
+    border-bottom: solid 9px brown; }
+  .exercise-table-wrap form {
+    margin-left: 5%;
+    margin-bottom: 2rem; }
+
+.join-requests-wrap {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%;
+  margin-left: 17.05961%;
+  background-color: white;
+  margin-top: 7rem; }
+  .join-requests-wrap:last-child {
+    margin-right: 0; }
+  .join-requests-wrap .join-requests-head {
+    border-bottom: solid 9px brown; }
+  .join-requests-wrap .join-request-info b {
+    width: 13%;
+    display: inline-block; }
+  .join-requests-wrap .join-request-info .bb {
+    border-right: solid 1px #B1B1B1; }
+  .join-requests-wrap .join-request-info .bbb {
+    margin-left: 1rem; }
+  .join-requests-wrap .join-request-info .b-email {
+    padding-right: 8rem; }
+  .join-requests-wrap .join-request-info p {
+    width: 13%;
+    margin-right: 7%;
+    text-align: center; }
+  .join-requests-wrap .request-res-button {
+    font-size: 10px; }

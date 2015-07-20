@@ -105,9 +105,6 @@
 /// Classroom Join Requests
 ///
 
-      // $scope.populateRequests = function () {
-
-      // };
 
 ///
 ///

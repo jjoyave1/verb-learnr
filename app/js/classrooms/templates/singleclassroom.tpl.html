@@ -1,7 +1,7 @@
 <div layout="column" layout-align="center center" class="md-whiteframe-z2 classroom-table-wrap" style="margin-bottom: 8rem;">
 
   <md-toolbar>
-    <div class="md-toolbar-tools" id="create-class-head">
+    <div class="md-toolbar-tools create-class-head" id="create-class-head">
       <h2>Class {{singleClassroomData.name}}</h2>
     </div>
   </md-toolbar>
@@ -19,8 +19,44 @@
 
       <md-button class="md-accent md-hue-3 md-raised join-class-button" ng-click="goToJoinPage()">Request to Join</md-button>
 
-      <md-button class= "md-accent md-hue-3 md-raised get-requests-button"></md-button>
+      <md-button class= "md-accent md-hue-3 md-raised get-requests-button" id="view-requests-button" ng-if="true" ng-click="goToRequestsPage()">View Join Requests</md-button>
 
     </md-list>
+
   </div>
+
+
+
+</div>
+
+<div layout="column" layout-align="center center" class="md-whiteframe-z2 exercise-table-wrap" style="margin-bottom: 8rem;">
+
+  <md-toolbar>
+    <div class="md-toolbar-tools create-class-head" id="exercises-head">
+      <h2> Exercises </h2>
+    </div>
+
+    <md-content layout-padding>
+
+      <form>
+
+        <h6>Open new exercise:</h6>
+
+        <md-input-container>
+          <label>Exercise Title</label>
+          <input type="text" ng-model="data.name">
+        </md-input-container>
+
+        <md-input-container>
+          <label>Description</label>
+          <input type="text" ng-model="data.description">
+        </md-input-container>
+
+        <md-button class="md-accent md-hue-3 md-raised create-exercise-submit">Submit Exercise</md-button>
+
+      </form>
+
+    </md-content>
+  </md-toolbar>
+
 </div>

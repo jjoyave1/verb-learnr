@@ -69,6 +69,54 @@
       });
     };
 
+    this.getJoinRequests = function (id) {
+      HEROKU.CONFIG.headers["Access-Token"] = $cookies.get('sessionToken');
+
+      var deferred = $q.defer();
+
+      $http({
+        method: "GET",
+        url: endpoint + "classrooms/" + id + "/requests",
+        headers: HEROKU.CONFIG.headers
+      }).then( function (res) {
+        return deferred.resolve(res.data);
+      });
+      return deferred.promise;
+    };
+
+    this.processJoinRequest = function (id) {
+
+      var params  = {accept: "yes"};
+
+      console.log(id);
+
+      HEROKU.CONFIG.headers["Access-Token"] = $cookies.get('sessionToken');
+      $http({
+        method: 'POST',
+        url: endpoint + "requests/" + id,
+        headers: HEROKU.CONFIG.headers,
+        params: params
+      }).then (function (data) {
+        console.log(data);
+      });
+    };
+
+    this.denyJoinRequest = function (id) {
+
+      var params  = {accept: "no"};
+
+      HEROKU.CONFIG.headers["Access-Token"] = $cookies.get('sessionToken');
+      $http({
+        method: 'POST',
+        url: endpoint + "requests/" + id,
+        headers: HEROKU.CONFIG.headers,
+        params: params
+      });
+    };
+
+    this.getUserRole = function (id) {
+    };
+
   }]);
 
 }());

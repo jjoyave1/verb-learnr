@@ -1,0 +1,36 @@
+<div layout="column" layout-align="center center" class="md-whiteframe-z2 join-requests-wrap" style="margin-bottom: 8rem;">
+
+  <md-toolbar>
+    <div class="md-toolbar-tools join-requests-head" id="join-request-head">
+      <h2>Join Requests</h2>
+    </div>
+  </md-toolbar>
+
+  <md-list>
+
+    <md-list-item class="join-request-info">
+      <b class="bb bbb">requestID</b>
+      <b class="bb bbb">username</b>
+      <b class="bb bbb b-email">email</b>
+      <b class= "bbb">message</b>
+    </md-list-item>
+
+    <md-list-item ng-repeat="x in userJoinRequests" class="join-request-info">
+      <p class="req-id">{{x.request_id}}</p>
+      <p>{{x.user.username}}</p>
+      <p>{{x.user.email}}</p>
+      <p>{{x.message}}</p>
+
+      <div class="md-actions" layout="row" layout-align="end center">
+        <md-button
+            class="md-accent md-hue-3 md-raised request-res-button"
+            ng-click="processRequest(x.request_id)">Accept</md-button>
+        <md-button
+            class="md-accent md-hue-3 md-raised request-res-button"
+            ng-click="denyRequest(x.request_id)">Reject</md-button>
+      </div>
+
+    <md-list-item>
+  </md-list>
+
+</div>

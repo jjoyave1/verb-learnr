@@ -29,6 +29,8 @@
       return deferred.promise;
     };
 
+
+
     // this.getJoinRequests = function (id) {
     //   $http({
     //     method: 'GET',
