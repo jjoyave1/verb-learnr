@@ -289,19 +289,43 @@ md-fab-toolbar.md-fab-toolbar-wrapper {
   margin-top: 7rem;
   margin-bottom: 2.5rem; }
 
-.exercise-table-wrap {
+.exercise-form-wrap {
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 65.88078%;
   margin-left: 17.05961%; }
-  .exercise-table-wrap:last-child {
+  .exercise-form-wrap:last-child {
     margin-right: 0; }
-  .exercise-table-wrap .exercises-head {
+  .exercise-form-wrap .exercises-head {
     border-bottom: solid 9px brown; }
-  .exercise-table-wrap form {
+  .exercise-form-wrap form {
     margin-left: 5%;
     margin-bottom: 2rem; }
+
+.classroom-exercise-list-wrap {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%;
+  margin-left: 17.05961%; }
+  .classroom-exercise-list-wrap:last-child {
+    margin-right: 0; }
+  .classroom-exercise-list-wrap md-list {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 2rem; }
+    .classroom-exercise-list-wrap md-list md-list-item {
+      border-bottom: dotted 1px #B1B1B1; }
+      .classroom-exercise-list-wrap md-list md-list-item .exercise-nav {
+        text-decoration: none;
+        color: #B1B1B1;
+        font-size: 10px;
+        cursor: pointer;
+        width: 4em;
+        text-align: center; }
+      .classroom-exercise-list-wrap md-list md-list-item .exercise-nav.hover {
+        text-decoration: underline; }
 
 .join-requests-wrap {
   float: left;
@@ -330,3 +354,26 @@ md-fab-toolbar.md-fab-toolbar-wrapper {
     text-align: center; }
   .join-requests-wrap .request-res-button {
     font-size: 10px; }
+
+.exercise-builder-list-wrap {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%;
+  margin-left: 17.05961%;
+  margin-top: 7rem;
+  background-color: white; }
+  .exercise-builder-list-wrap:last-child {
+    margin-right: 0; }
+  .exercise-builder-list-wrap form {
+    margin: 5%; }
+
+.exercise-question-list-wrap {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%;
+  margin-left: 17.05961%;
+  background-color: white; }
+  .exercise-question-list-wrap:last-child {
+    margin-right: 0; }

@@ -368,7 +368,7 @@ md-fab-toolbar.md-fab-toolbar-wrapper {
   }
 }
 
-.exercise-table-wrap {
+.exercise-form-wrap {
   @include span-columns(8);
   @include shift(2);
 
@@ -379,6 +379,34 @@ md-fab-toolbar.md-fab-toolbar-wrapper {
   form {
     margin-left: 5%;
     margin-bottom: 2rem;
+  }
+}
+
+.classroom-exercise-list-wrap {
+  @include span-columns(8);
+  @include shift(2);
+
+  md-list {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 2rem;
+
+    md-list-item {
+      border-bottom: dotted 1px $ltgrey;
+
+      .exercise-nav {
+        text-decoration: none;
+        color: $ltgrey;
+        font-size: 10px;
+        cursor:pointer;
+        width: 4em;
+        text-align: center;
+      }
+
+      .exercise-nav.hover {
+        text-decoration: underline;
+      }
+    }
   }
 }
 //
@@ -438,8 +466,31 @@ md-fab-toolbar.md-fab-toolbar-wrapper {
   }
 }
 
-
 //
 //
 //
 
+//
+// EXERCISE EDIT PAGE STYLES
+//
+
+.exercise-builder-list-wrap {
+  @include span-columns(8);
+  @include shift(2);
+  margin-top: 7rem;
+  background-color: white;
+
+  form {
+    margin: 5%;
+  }
+}
+
+.exercise-question-list-wrap {
+  @include span-columns(8);
+  @include shift(2);
+  background-color: white;
+}
+
+//
+//
+//

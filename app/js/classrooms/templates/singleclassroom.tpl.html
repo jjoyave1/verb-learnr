@@ -1,4 +1,4 @@
-<div layout="column" layout-align="center center" class="md-whiteframe-z2 classroom-table-wrap" style="margin-bottom: 8rem;">
+<div layout="column" layout-align="center center" class="md-whiteframe-z2 classroom-table-wrap" style="margin-bottom: 2.5rem;">
 
   <md-toolbar>
     <div class="md-toolbar-tools create-class-head" id="create-class-head">
@@ -29,16 +29,16 @@
 
 </div>
 
-<div layout="column" layout-align="center center" class="md-whiteframe-z2 exercise-table-wrap" style="margin-bottom: 8rem;">
+<div layout="column" layout-align="center center" class="md-whiteframe-z2 exercise-form-wrap" style="margin-bottom: 2.5rem;">
 
   <md-toolbar>
     <div class="md-toolbar-tools create-class-head" id="exercises-head">
-      <h2> Exercises </h2>
+      <h2> Start New Exercises </h2>
     </div>
 
     <md-content layout-padding>
 
-      <form>
+      <form ng-submit="newExercise(data, singleClassroomData.id)">
 
         <h6>Open new exercise:</h6>
 
@@ -59,4 +59,26 @@
     </md-content>
   </md-toolbar>
 
+</div>
+
+<div layout="column" layout-align="center center" class="md-whiteframe-z2 classroom-exercise-list-wrap" style="margin-bottom: 8rem;">
+
+  <md-toolbar>
+    <div class="md-toolbar-tools create-class-head" id="exercise-list-head">
+      <h2>Exercises for {{singleClassroomData.name}} class</h2>
+    </div>
+  </md-toolbar>
+
+  <md-list>
+    <md-list-item ng-repeat="x in thisClassroomExercises">
+      <h6>Exercise: {{x.name}}</h6>
+      <p ng-if"x.description" style="font-size: 10px;margin-left: 0.9rem;"> Description: {{x.description}}</p>
+
+      <p class = "exercise-nav">Run Exercise</p>
+      <p class = "exercise-nav" ng-click="goToExerciseEditPage(x.id)">Edit Exercise</p>
+      <p class = "exercise-nav" style="color: red">Delete Exercise</p>
+
+
+    </md-list-item>
+  </md-list>
 </div>

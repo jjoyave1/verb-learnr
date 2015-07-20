@@ -71,6 +71,12 @@
         url: '/classrooms/:id/joinrequests',
         templateUrl: 'js/classrooms/templates/joinrequests.tpl.html',
         controller: "ClassroomRequests"
+      })
+
+      .state('editexercise', {
+        url: '/classrooms/:id/exercises/:exerciseId',
+        templateUrl: 'js/exercises/templates/edit.exercise.tpl.html',
+        controller: 'Exercise'
       });
 
   })

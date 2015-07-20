@@ -25,7 +25,9 @@
       }
 
     });
-
+///
+/// Request Handlers
+///
     $scope.goToJoinPage = function () {
       $location.path('classrooms/' + $stateParams.id + "/join");
     };
@@ -38,6 +40,28 @@
       $location.path('classrooms/' + $stateParams.id + '/joinrequests');
     };
 
+///
+///
+///
+
+///
+/// Exercise Handlers
+///
+
+    $scope.newExercise = function (info, id) {
+      ExerciseService.createExercise(info, id);
+    };
+
+    ExerciseService.getClassroomExercises($stateParams.id).then( function (data) {
+      $scope.thisClassroomExercises = data;
+    });
+
+    $scope.goToExerciseEditPage = function (exerciseId) {
+      $location.path('classrooms/' + $stateParams.id + "/exercises/" + exerciseId);
+    };
+///
+///
+///
 
   }]);
 

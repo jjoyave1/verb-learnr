@@ -1,0 +1,37 @@
+<div layout="column" layout-align="center center" class="md-whiteframe-z2 exercise-builder-list-wrap" style="margin-bottom: 2.5rem;">
+
+  <md-toolbar>
+    <div class="md-toolbar-tools create-class-head" id="exercise-list-head">
+      <h2>Build Exercise</h2>
+    </div>
+  </md-toolbar>
+  <form ng-submit>
+    <div class="row">
+      <md-select ng-model="form" placeholder="Form [person]" style="display:inline-block;">
+        <md-option ng-repeat="x in verbForms" value="{{x.form}}">{{x.form}}</md-option>
+      </md-select>
+
+      <md-select ng-model="tense" placeholder="Tense" style="display:inline-block;">
+        <md-option ng-repeat="y in verbTenses" value="{{y.combined_tense_english}}">{{y.combined_tense_english}}</md-option>
+      </md-select>
+
+      <md-input-container>
+        <label>Choose verb to add.</label>
+        <input type="text" ng-model="verb">
+      </md-input-container>
+
+    </div>
+  </form>
+
+</div>
+
+<div layout="column" layout-align="center center" class="md-whiteframe-z2 exercise-question-list-wrap" style="margin-bottom: 2.5rem;">
+
+  <md-toolbar>
+    <div class="md-toolbar-tools create-class-head" id="exercise-list-head">
+      <h2> Current Exercise Questions</h2>
+    </div>
+  </md-toolbar>
+
+</div>
+
