@@ -4,9 +4,9 @@
 
   angular.module('Unoverb')
 
-    .service('ClassroomService', ['$http', 'HEROKU', '$location', '$cookies', '$state', '$q', '$stateParams',
+    .service('ClassroomService', ['$http', 'HEROKU', '$location', '$cookies', '$state', '$q',
 
-      function ($http, HEROKU, $location, $cookies, $state, $stateParams, $q) {
+      function ($http, HEROKU, $location, $cookies, $state, $q) {
 
     var endpoint = HEROKU.URL;
 
@@ -21,7 +21,7 @@
         params: params,
         headers: HEROKU.CONFIG.headers
       }).success( function (data) {
-        console.log(data);
+        // console.log(data);
       });
     };
 
@@ -52,18 +52,18 @@
       }
     };
 
-    this.joinClassroom = function (role, message) {
+    this.joinClassroom = function (x, id) {
 
       var params = {
-        role : role,
-        message : message
+        role : x.role,
+        message : x.message
       };
 
       HEROKU.CONFIG.headers["Access-Token"] = $cookies.get('sessionToken');
 
       $http({
         method: 'POST',
-        url: endpoint + "classrooms/" + $stateParams.id + "/join",
+        url: endpoint + "classrooms/" + id + "/join",
         params: params,
         headers: HEROKU.CONFIG.headers
       });

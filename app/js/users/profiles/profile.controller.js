@@ -83,6 +83,15 @@
         UserService.changePw(pw);
         $mdBottomSheet.hide();
         $state.go('profile');
+      };
+///
+///
+///
+
+///
+/// Classroom Join Requests
+///
+      $scope.populateRequests = function () {
 
       };
 

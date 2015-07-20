@@ -139,7 +139,7 @@ body {
 
   .prof-submit {
     text-align: center;
-    margin-left: 41.5%;
+    margin-left: 39.2%;
   }
 
   .edit-profile {
@@ -178,7 +178,7 @@ body {
   }
 
   .avatar-wrap {
-    margin-left: 46.5%;
+    margin-left: 45.5%;
 
     .avatar-img {
       border-radius: 50%;
@@ -189,6 +189,12 @@ body {
       overflow: hidden;
     }
   }
+}
+
+.requests-wrap {
+  @include span-columns(8);
+  @include shift(2);
+  background-color: white;
 }
 
 //fab bar styling

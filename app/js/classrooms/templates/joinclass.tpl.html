@@ -1,4 +1,24 @@
 <div layout="column" layout-align="center center" class="md-whiteframe-z2 classroom-table-wrap" style="margin-bottom: 8rem;">
 
+  <form ng-submit="sendJoinRequest(a)" id="join-class-form" class="join-class-form">
+
+      <div class="row class-input-block" style="display: inline-block;">
+        <md-input-container>
+          <label>Choose Your Role in the Class</label>
+          <input ng-model="a.role" type ="text" class="join-role">
+        </md-input-container>
+
+        <md-input-container>
+          <label>Description</label>
+          <input ng-model="a.message" type="text" class="join-msg">
+        </md-input-container>
+
+      </div>
+
+      <br>
+
+      <md-button class="md-accent md-hue-3 md-raised class-join-submit">Submit</md-button>
+
+    </form>
 
 </div>

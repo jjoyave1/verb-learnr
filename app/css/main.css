@@ -108,7 +108,7 @@ body {
     margin: 0 auto; }
   .prof-content .prof-submit {
     text-align: center;
-    margin-left: 41.5%; }
+    margin-left: 39.2%; }
   .prof-content .edit-profile {
     color: black;
     text-decoration: none;
@@ -134,7 +134,7 @@ body {
     text-decoration: underline;
     cursor: pointer; }
   .prof-content .avatar-wrap {
-    margin-left: 46.5%; }
+    margin-left: 45.5%; }
     .prof-content .avatar-wrap .avatar-img {
       border-radius: 50%;
       text-align: center;
@@ -142,6 +142,16 @@ body {
       border: solid 2px grey;
       padding: 1px;
       overflow: hidden; }
+
+.requests-wrap {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%;
+  margin-left: 17.05961%;
+  background-color: white; }
+  .requests-wrap:last-child {
+    margin-right: 0; }
 
 md-fab-toolbar.md-fab-toolbar-wrapper {
   height: 4rem; }

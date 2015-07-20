@@ -62,7 +62,7 @@
       })
 
       .state('joinclassroom', {
-        url: '/classrooms/:id',
+        url: '/classrooms/:id/join',
         templateUrl: 'js/classrooms/templates/joinclass.tpl.html',
         controller: 'SingleClassroom'
       });
