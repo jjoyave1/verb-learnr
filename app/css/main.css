@@ -96,8 +96,9 @@ body {
   background-color: white; }
   .profile-wrap:last-child {
     margin-right: 0; }
-  .profile-wrap .profile-headers {
-    border-bottom: solid 9px brown; }
+
+.profile-headers {
+  border-bottom: solid 9px brown; }
 
 .prof-content {
   padding: 1.5rem;
@@ -142,6 +143,16 @@ body {
       border: solid 2px grey;
       padding: 1px;
       overflow: hidden; }
+
+.user-classrooms-wrap {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%;
+  margin-left: 17.05961%;
+  background-color: white; }
+  .user-classrooms-wrap:last-child {
+    margin-right: 0; }
 
 .requests-wrap {
   float: left;

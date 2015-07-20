@@ -122,9 +122,10 @@ body {
   @include shift(2);
   background-color: white;
 
-  .profile-headers {
-    border-bottom: solid 9px brown;
-  }
+}
+
+.profile-headers {
+  border-bottom: solid 9px brown;
 }
 
 .prof-content {
@@ -189,6 +190,12 @@ body {
       overflow: hidden;
     }
   }
+}
+
+.user-classrooms-wrap {
+  @include span-columns(8);
+  @include shift(2);
+  background-color: white;
 }
 
 .requests-wrap {

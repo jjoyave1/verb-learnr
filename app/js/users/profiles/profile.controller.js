@@ -4,9 +4,9 @@
 
   angular.module('Unoverb')
 
-    .controller('Profile', ['$scope', '$http', 'UserService', 'HEROKU', '$location', '$cookies', '$mdToast', '$q', '$mdBottomSheet', '$state',
+    .controller('Profile', ['$scope', '$http', 'UserService', 'ProfileService', 'HEROKU', '$location', '$cookies', '$mdToast', '$q', '$mdBottomSheet', '$state', '$$state',
 
-      function ($scope, $http, UserService, HEROKU, $location, $cookies, $mdToast, $q, $mdBottomSheet, $state) {
+      function ($scope, $http, UserService, ProfileService, HEROKU, $location, $cookies, $mdToast, $q, $mdBottomSheet, $state, $$state) {
 
       var User = function(options) {
 
@@ -84,6 +84,22 @@
         $mdBottomSheet.hide();
         $state.go('profile');
       };
+///
+///
+///
+
+///
+/// Classrooms for given user
+///
+
+      $scope.userClassrooms = ProfileService.getUserClassrooms()
+        .then (function (data) {
+        // console.log(data.data);
+        return data.data;
+      });
+
+      console.log($scope.userClassrooms);
+
 ///
 ///
 ///
