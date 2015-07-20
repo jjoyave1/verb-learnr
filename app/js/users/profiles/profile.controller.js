@@ -92,11 +92,11 @@
 /// Classrooms for given user
 ///
 
-      $scope.userClassrooms = ProfileService.getUserClassrooms()
-        .then (function (data) {
+      $scope.userClassrooms = ProfileService.getUserClassrooms();
+        // .then (function (data) {
         // console.log(data.data);
-        return data.data;
-      });
+        // return angular.toJson(data.data);
+      // });
 
       console.log($scope.userClassrooms);
 
@@ -107,9 +107,10 @@
 ///
 /// Classroom Join Requests
 ///
-      $scope.populateRequests = function () {
 
-      };
+      // $scope.populateRequests = function () {
+
+      // };
 
 ///
 ///
