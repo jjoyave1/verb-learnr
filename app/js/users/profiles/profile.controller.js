@@ -92,13 +92,10 @@
 /// Classrooms for given user
 ///
 
-      $scope.userClassrooms = ProfileService.getUserClassrooms();
-        // .then (function (data) {
-        // console.log(data.data);
-        // return angular.toJson(data.data);
-      // });
-
-      console.log($scope.userClassrooms);
+      ProfileService.getUserClassrooms()
+        .then (function (data) {
+          $scope.userClassrooms = data;
+      });
 
 ///
 ///

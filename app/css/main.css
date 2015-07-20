@@ -153,6 +153,29 @@ body {
   background-color: white; }
   .user-classrooms-wrap:last-child {
     margin-right: 0; }
+  .user-classrooms-wrap .user-classroom-list {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%; }
+    .user-classrooms-wrap .user-classroom-list:last-child {
+      margin-right: 0; }
+    .user-classrooms-wrap .user-classroom-list md-list-item {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 31.76157%;
+      height: 337px; }
+      .user-classrooms-wrap .user-classroom-list md-list-item:last-child {
+        margin-right: 0; }
+      .user-classrooms-wrap .user-classroom-list md-list-item:nth-child(3n) {
+        margin-right: 0; }
+      .user-classrooms-wrap .user-classroom-list md-list-item:nth-child(3n+1) {
+        clear: left; }
+      .user-classrooms-wrap .user-classroom-list md-list-item h4 {
+        font-size: 14px; }
+      .user-classrooms-wrap .user-classroom-list md-list-item p {
+        font-size: 12px; }
 
 .requests-wrap {
   float: left;

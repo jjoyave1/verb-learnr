@@ -196,6 +196,24 @@ body {
   @include span-columns(8);
   @include shift(2);
   background-color: white;
+
+  .user-classroom-list {
+    @include span-columns(12);
+
+    md-list-item {
+      @include span-columns(4);
+      @include omega(3n);
+      height: 337px;
+
+      h4 {
+        font-size: 14px;
+      }
+
+      p {
+        font-size: 12px;
+      }
+    }
+  }
 }
 
 .requests-wrap {

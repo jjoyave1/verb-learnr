@@ -95,18 +95,18 @@
     </div>
   </md-toolbar>
 
-  <md-list>
+  <md-list class = "user-classroom-list">
     <md-list-item ng-repeat="x in userClassrooms">
 
       <md-card>
-        <img src="{{x.$$state.value.avatar}}" class="md-card-image">
+        <img src="{{x.avatar}}" style="width:35%;margin: 0 auto;">
 
       <md-card-content>
 
-        <h4 class="md-title">Classroom: {{ x.$$state.value.name }} [id: {{ x.$$state.value.id }}]</h4>
+        <h4 class="md-title">Classroom: {{ x.name }} [id: {{ x.id }}]</h4>
 
-        <p>Class info: {{x.$$state.value.description}}</p>
-        <p>Your role: {{x.$$state.value.role}}</p>
+        <p>Class info: {{x.description}}</p>
+        <p>Your role: {{x.role}}</p>
 
       </md-card-content>
 

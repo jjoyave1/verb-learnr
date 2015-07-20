@@ -12,14 +12,21 @@
 
     this.getUserClassrooms = function () {
 
+      var deferred = $q.defer();
+
       HEROKU.CONFIG.headers["Access-Token"] = $cookies.get('sessionToken');
 
-      return $http({
+      $http({
         method: 'GET',
         url: endpoint + "user/classrooms/",
         headers: HEROKU.CONFIG.headers
+      }).then( function (res) {
+
+        return deferred.resolve(res.data);
+
       });
 
+      return deferred.promise;
     };
 
     // this.getJoinRequests = function (id) {
