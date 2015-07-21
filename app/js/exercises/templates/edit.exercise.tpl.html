@@ -5,17 +5,19 @@
       <h2>Build Exercise</h2>
     </div>
   </md-toolbar>
-  <form ng-submit>
+  <form ng-submit="submitQuestion(data)">
     <div class="row">
-      <md-select ng-model="form" placeholder="Form [person]" style="display:inline-block;">
+      <md-select ng-model="data.form" placeholder="Form [person]" style="display:inline-block;">
         <md-option ng-repeat="x in verbForms" value="{{x.form}}">{{x.form}}</md-option>
       </md-select>
 
-      <md-select ng-model="tense" placeholder="Tense" style="display:inline-block;">
+      <md-select ng-model="data.combined_tense_english" placeholder="Tense" style="display:inline-block;">
         <md-option ng-repeat="y in verbTenses" value="{{y.combined_tense_english}}">{{y.combined_tense_english}}</md-option>
       </md-select>
 
-      <angucomplete-alt id="verbs"
+        <input ng-model="data.verb" id="hidden_verb_value">
+
+      <div><angucomplete-alt id="verb"
                     placeholder="Add Verb"
                     pause="400"
                     selected-object="verb"
@@ -25,8 +27,12 @@
                     text-searching="Searching verb database..."
                     text-no-results="Not found."
                     remote-url-data-field="verbs"
-                    title-field="verbs"
-                    input-class="verb-autocomp"/>
+                    title-field="verb"
+                    input-class="verb-autocomp form-control form-control-small"
+                    ng-model="data.verb"
+                    ng-change="inputChangeHandler(data.verb)"/></div>
+
+      <div class="md-actions" layout="row" layout-align="end center"><md-button class="md-accent md-hue-3 md-raised">Submit</md-button></div>
 
     </div>
   </form>

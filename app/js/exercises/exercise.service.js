@@ -15,7 +15,6 @@
           description : info.description
         };
 
-        // HEROKU.CONFIG.headers['Content-Type'] = "application/json";
         HEROKU.CONFIG.headers['Access-Token'] = $cookies.get('sessionToken');
 
         $http({
@@ -108,32 +107,47 @@
 
       this.addExerciseQuestion = function (info, id) {
 
-        var data = angular.toJson({
+
+        var data = {
           form : info.form,
-          verb : info.verb,
-          combined_tense_english : info.combined_tense_english
+          combined_tense_english : info.combined_tense_english,
+          verb : $("#hidden_verb_value").val()
+        },
+            dataArray = [];
+
+        dataArray.push(data);
+
+
+
+        HEROKU.CONFIG.headers['Access-Token'] = $cookies.get('sessionToken');
+        HEROKU.CONFIG.headers['Content-Type'] = "application/json";
+
+
+        $http({
+          method : 'POST',
+          url: endpoint + 'exercises/' + id + "/questions",
+          headers: HEROKU.CONFIG.headers,
+          data: {data: dataArray}
+        }).success (function (res) {
+          console.log(res);
         });
+      };
+
+      this.populateQuestionsForExercise = function (id) {
+
+        var deferred = $q.defer();
 
         HEROKU.CONFIG.headers['Access-Token'] = $cookies.get('sessionToken');
 
         $http({
-          method : 'POST',
-          url: endpoint + 'exercises/',
-          data: data
+          method : 'GET',
+          url: endpoint + "exercises/" + id + "/questions",
+          headers: HEROKU.CONFIG.headers
+        }).then(function (res){
+          return deferred.resolve(res.data);
         });
+        return deferred.promise;
       };
-
-      // this.searchVerbs = function(verb) {
-
-      //   HEROKU.CONFIG.headers['Access-Token'] = $cookies.get('sessionToken');
-
-      //   return $http({
-      //             method : 'GET',
-      //             url : endpoint + 'verbs/search',
-      //             headers : HEROKU.CONFIG.headers,
-      //             data : verb
-      //           });
-      // };
 ///
 ///
 ///

@@ -680,6 +680,9 @@
         };
 
         scope.inputChangeHandler = function(str) {
+
+          $("#hidden_verb_value").val($('#verb_value').val());
+
           if (str.length < minlength) {
             clearResults();
           }

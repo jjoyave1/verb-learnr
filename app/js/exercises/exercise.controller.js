@@ -16,7 +16,14 @@
       $scope.verbTenses = data;
     });
 
-    // $scope.searchAPI = ExerciseService.searchVerbs(verb);
+    $scope.submitQuestion = function (data) {
+      ExerciseService.addExerciseQuestion(data, $stateParams.exerciseId);
+    };
+
+
+
+
+
 
     $scope.dataFormat = function(str) {
 
@@ -27,7 +34,6 @@
       HEROKU.CONFIG.headers["Access-Token"] = $cookies.get('sessionToken');
       return {
         search: str,
-        headers: HEROKU.CONFIG.headers,
         language: "spanish"
       };
     };

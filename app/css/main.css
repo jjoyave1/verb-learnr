@@ -374,6 +374,12 @@ md-fab-toolbar.md-fab-toolbar-wrapper {
   .exercise-builder-list-wrap input:focus {
     outline: none; }
 
+.angucomplete-dropdown {
+  overflow-y: auto;
+  max-height: 200px;
+  border-radius: 2px;
+  border: solid 1px #B1B1B1; }
+
 .exercise-question-list-wrap {
   float: left;
   display: block;
