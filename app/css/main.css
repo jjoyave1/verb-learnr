@@ -389,3 +389,18 @@ md-fab-toolbar.md-fab-toolbar-wrapper {
   background-color: white; }
   .exercise-question-list-wrap:last-child {
     margin-right: 0; }
+
+.game-card-wrap {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%;
+  margin-left: 17.05961%;
+  margin-top: 7rem;
+  background-color: white; }
+  .game-card-wrap:last-child {
+    margin-right: 0; }
+  .game-card-wrap .game-play-head {
+    border-bottom: solid 9px brown; }
+  .game-card-wrap .game-field {
+    height: 600px; }

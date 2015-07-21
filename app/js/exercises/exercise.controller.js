@@ -8,6 +8,18 @@
 
     var endpoint = HEROKU.URL;
 
+    function numgen (arr) {
+      var repeats = arr.length;
+      var num = 1;
+      var numbers = [];
+
+      for (var i = 0; i < repeats; i++) {
+        numbers.push(num);
+        num++;
+      }
+      return numbers;
+    }
+
     ExerciseService.getVerbForms().then( function (data) {
       $scope.verbForms = data;
     });
@@ -20,9 +32,12 @@
       ExerciseService.addExerciseQuestion(data, $stateParams.exerciseId);
     };
 
+    ExerciseService.populateQuestionsForExercise($stateParams.exerciseId).then( function (data) {
+      $scope.exerciseQuestions = data;
 
+      $scope.exerciseNumbers = numgen($scope.exerciseQuestions);
 
-
+    });
 
 
     $scope.dataFormat = function(str) {
@@ -36,6 +51,10 @@
         search: str,
         language: "spanish"
       };
+    };
+
+    $scope.goToGame = function () {
+      $location.path('classrooms/' + $stateParams.id + '/exercises/' + $stateParams.exerciseId + '/play');
     };
 
 

@@ -15,7 +15,7 @@
         <md-option ng-repeat="y in verbTenses" value="{{y.combined_tense_english}}">{{y.combined_tense_english}}</md-option>
       </md-select>
 
-        <input ng-model="data.verb" id="hidden_verb_value">
+        <input ng-model="data.verb" id="hidden_verb_value" style="display:none;">
 
       <div><angucomplete-alt id="verb"
                     placeholder="Add Verb"
@@ -47,5 +47,27 @@
     </div>
   </md-toolbar>
 
+  <md-content>
+    <md-list>
+
+      <md-list-item>
+        <p><b>verb</b></p>
+        <p><b>form</b></p>
+        <p><b>combined_tense_english</b></p>
+        <p></p>
+        <p><b>conjugation</b></p>
+      </md-list-item>
+
+      <md-list-item ng-repeat="q in exerciseQuestions">
+        <p>{{ q.verb }}</p>
+        <p>{{ q.form }}</p>
+        <p>{{ q.combined_tense_english }}</p>
+        <p></p>
+        <p>{{ q.conjugation }}</p>
+      </md-list-item>
+    </md-list>
+  </md-content>
+
+  <md-button class="md-accent md-hue-3 md-raised" ng-click="goToGame()">PLAY GAME</md-button>
 </div>
 

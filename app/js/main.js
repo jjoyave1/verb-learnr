@@ -77,6 +77,12 @@
         url: '/classrooms/:id/exercises/:exerciseId',
         templateUrl: 'js/exercises/templates/edit.exercise.tpl.html',
         controller: 'Exercise'
+      })
+
+      .state('play', {
+        url: '/classrooms/:id/exercises/:exerciseId/play',
+        templateUrl: 'js/game/templates/game.tpl.html',
+        controller: 'Game'
       });
 
   })

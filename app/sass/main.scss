@@ -511,3 +511,25 @@ md-fab-toolbar.md-fab-toolbar-wrapper {
 //
 //
 //
+
+//
+// GAME STYLES
+//
+.game-card-wrap {
+  @include span-columns(8);
+  @include shift(2);
+  margin-top: 7rem;
+  background-color: white;
+
+  .game-play-head {
+    border-bottom: solid 9px brown;
+  }
+
+  .game-field {
+    height: 600px;
+  }
+
+}
+//
+//
+//
