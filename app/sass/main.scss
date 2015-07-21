@@ -483,6 +483,16 @@ md-fab-toolbar.md-fab-toolbar-wrapper {
   form {
     margin: 5%;
   }
+
+  input {
+    border:none;
+    outline: none;
+    border-bottom: solid 1px $ltgrey;
+  }
+
+  input:focus {
+    outline: none;
+  }
 }
 
 .exercise-question-list-wrap {

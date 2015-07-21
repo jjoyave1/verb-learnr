@@ -81,7 +81,6 @@
         }).then ( function (res) {
           return deferred.resolve(res.data);
         });
-        console.log(deferred.promise);
         return deferred.promise;
       };
 
@@ -107,7 +106,7 @@
         return deferred.promise;
       };
 
-      this.addExerciseQuestion = function (info) {
+      this.addExerciseQuestion = function (info, id) {
 
         var data = angular.toJson({
           form : info.form,
@@ -115,7 +114,26 @@
           combined_tense_english : info.combined_tense_english
         });
 
+        HEROKU.CONFIG.headers['Access-Token'] = $cookies.get('sessionToken');
+
+        $http({
+          method : 'POST',
+          url: endpoint + 'exercises/',
+          data: data
+        });
       };
+
+      // this.searchVerbs = function(verb) {
+
+      //   HEROKU.CONFIG.headers['Access-Token'] = $cookies.get('sessionToken');
+
+      //   return $http({
+      //             method : 'GET',
+      //             url : endpoint + 'verbs/search',
+      //             headers : HEROKU.CONFIG.headers,
+      //             data : verb
+      //           });
+      // };
 ///
 ///
 ///

@@ -367,6 +367,12 @@ md-fab-toolbar.md-fab-toolbar-wrapper {
     margin-right: 0; }
   .exercise-builder-list-wrap form {
     margin: 5%; }
+  .exercise-builder-list-wrap input {
+    border: none;
+    outline: none;
+    border-bottom: solid 1px #B1B1B1; }
+  .exercise-builder-list-wrap input:focus {
+    outline: none; }
 
 .exercise-question-list-wrap {
   float: left;

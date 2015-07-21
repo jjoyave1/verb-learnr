@@ -16,6 +16,21 @@
       $scope.verbTenses = data;
     });
 
+    // $scope.searchAPI = ExerciseService.searchVerbs(verb);
+
+    $scope.dataFormat = function(str) {
+
+      var params = {
+        language : "spanish"
+      };
+
+      HEROKU.CONFIG.headers["Access-Token"] = $cookies.get('sessionToken');
+      return {
+        search: str,
+        headers: HEROKU.CONFIG.headers,
+        language: "spanish"
+      };
+    };
 
 
   }]);

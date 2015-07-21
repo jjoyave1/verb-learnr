@@ -15,10 +15,18 @@
         <md-option ng-repeat="y in verbTenses" value="{{y.combined_tense_english}}">{{y.combined_tense_english}}</md-option>
       </md-select>
 
-      <md-input-container>
-        <label>Choose verb to add.</label>
-        <input type="text" ng-model="verb">
-      </md-input-container>
+      <angucomplete-alt id="verbs"
+                    placeholder="Add Verb"
+                    pause="400"
+                    selected-object="verb"
+                    remote-url="https://protected-scrubland-4220.herokuapp.com/verbs?search="
+                    remote-url-request-formatter="dataFormat"
+                    remote-url-request-with-credentials="true"
+                    text-searching="Searching verb database..."
+                    text-no-results="Not found."
+                    remote-url-data-field="verbs"
+                    title-field="verbs"
+                    input-class="verb-autocomp"/>
 
     </div>
   </form>

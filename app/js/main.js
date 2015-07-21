@@ -2,7 +2,7 @@
 
   'use strict';
 
-  angular.module('Unoverb', ['ui.router', 'ngCookies', 'ngMaterial'])
+  angular.module('Unoverb', ['ui.router', 'ngCookies', 'ngMaterial', 'angucomplete-alt'])
 
     .config(function ($urlRouterProvider, $stateProvider, $mdThemingProvider) {
 
