@@ -403,4 +403,13 @@ md-fab-toolbar.md-fab-toolbar-wrapper {
   .game-card-wrap .game-play-head {
     border-bottom: solid 9px brown; }
   .game-card-wrap .game-quest {
-    margin: 2.5rem; }
+    margin: 2.5rem;
+    padding: 2rem; }
+  .game-card-wrap .spec-char-btn {
+    cursor: pointer;
+    border-radius: 2px;
+    border: solid 1px brown;
+    width: 16px;
+    text-align: center; }
+  .game-card-wrap .spec-char-btn:hover {
+    color: #B1B1B1; }

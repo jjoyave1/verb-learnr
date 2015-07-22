@@ -25,6 +25,22 @@
     return deferred.promise;
   };
 
+  this.sendAnswers = function (data, id) {
+
+    HEROKU.CONFIG.headers["Access-Token"] = $cookies.get('sessionToken');
+    HEROKU.CONFIG.headers['Content-Type'] = "application/json";
+
+    $http({
+      method: 'POST',
+      url: endpoint + "exercises/" + id + "/games/save",
+      headers: HEROKU.CONFIG.headers,
+      data: data
+    }).then(function (data) {
+      console.log(data);
+    });
+
+
+  };
     }]);
 
 }());

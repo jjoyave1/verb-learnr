@@ -12,19 +12,26 @@
       </div>
 
 
-      <md-list class = "game-quest" id="game-quest">
-        <md-list-item><p>Verb:</p><p>{{current1.verb}}</p><p>Form [person]:</p><p>{{current1.form}}</p></md-list-item>
-        <md-list-item><p>Definition:</p><p>{{current1.verb_english}}</p><p>Example:</p><p>{{current1.example_english}}</p></md-list-item>
+      <md-list class = "game-quest" id="game-quest1" style="display:none">
+        <md-list-item><h2>{{current1.verb}}</h2></md-list-item>
+        <md-list-item><p>Form [person]:</p><p>{{current1.form}}</p><p>Definition:</p><p>{{current1.verb_english}}</p><p>Example:</p><p>{{current1.example_english}}</p></md-list-item>
         <md-list-item><p>Tense:&nbsp;{{current1.combined_tense_english}}</p></md-list-item>
 
-        <form ng-submit="submitGuess(answer)" class="game-form">
+        <form ng-submit="submitGuessOne(answer1)" class="game-form">
 
           <md-input-container>
-            <label>Answer</label><input ng-model="answer.guess" type="text" required>
+            <label>Answer</label><input ng-model="answer1.guess" type="text" required id='answer-field'>
           </md-input-container>
 
 
-          <div layout="row"><p>á</p>&nbsp;<p>é</p>&nbsp;<p>í</p>&nbsp;<p>ó</p>&nbsp;<p>ú</p>&nbsp;<p>ñ</p></div>
+          <div layout="row">
+            <span id="accent-a" class="spec-char-btn">á</span>&nbsp;
+            <span id="accent-e" class="spec-char-btn">é</span>&nbsp;
+            <span id="accent-i" class="spec-char-btn">í</span>&nbsp;
+            <span id="accent-o" class="spec-char-btn">ó</span>&nbsp;
+            <span id="accent-u" class="spec-char-btn">ú</span>&nbsp;
+            <span id="accent-n" class="spec-char-btn">ñ</span>
+          </div>
 
           <md-button class="md-accent md-hue-3 md-raised game-progress">Submit</md-button>
         </form>
@@ -32,47 +39,61 @@
 
 <!--  -->
 
-      <md-list class = "game-quest" id="game-quest">
-        <md-list-item><p>Verb:</p><p>{{current2.verb}}</p><p>Form [person]:</p><p>{{current2.form}}</p></md-list-item>
-        <md-list-item><p>Definition:</p><p>{{current2.verb_english}}</p><p>Example:</p><p>{{current2.example_english}}</p></md-list-item>
+      <md-list class = "game-quest" id="game-quest2" style="display:none">
+        <md-list-item><h2>{{current2.verb}}</h2></md-list-item>
+        <md-list-item><p>Form [person]:</p><p>{{current2.form}}</p><p>Definition:</p><p>{{current2.verb_english}}</p><p>Example:</p><p>{{current2.example_english}}</p></md-list-item>
         <md-list-item><p>Tense:&nbsp;{{current2.combined_tense_english}}</p></md-list-item>
 
-        <form ng-submit="submitGuess(answer)" class="game-form">
+        <form ng-submit="submitGuessTwo(answer2)" class="game-form">
 
           <md-input-container>
-            <label>Answer</label><input ng-model="answer.guess" type="text" required>
+            <label>Answer</label><input ng-model="answer2.guess" type="text" required id='answer-field2'>
           </md-input-container>
 
 
-          <div layout="row"><p>á</p>&nbsp;<p>é</p>&nbsp;<p>í</p>&nbsp;<p>ó</p>&nbsp;<p>ú</p>&nbsp;<p>ñ</p></div>
+          <div layout="row">
+            <span id="accent-a2" class="spec-char-btn">á</span>&nbsp;
+            <span id="accent-e2" class="spec-char-btn">é</span>&nbsp;
+            <span id="accent-i2" class="spec-char-btn">í</span>&nbsp;
+            <span id="accent-o2" class="spec-char-btn">ó</span>&nbsp;
+            <span id="accent-u2" class="spec-char-btn">ú</span>&nbsp;
+            <span id="accent-n2" class="spec-char-btn">ñ</span>
+          </div>
 
           <md-button class="md-accent md-hue-3 md-raised game-progress">Submit</md-button>
         </form>
       </md-list>
 
-<!--  -->
 
-      <md-list class = "game-quest" id="game-quest">
-        <md-list-item><p>Verb:</p><p>{{current3.verb}}</p><p>Form [person]:</p><p>{{current3.form}}</p></md-list-item>
-        <md-list-item><p>Definition:</p><p>{{current3.verb_english}}</p><p>Example:</p><p>{{current3.example_english}}</p></md-list-item>
+
+      <md-list class = "game-quest" id="game-quest3" style="display:none">
+        <md-list-item><h2>{{current3.verb}}</h2></md-list-item>
+        <md-list-item><p>Form [person]:</p><p>{{current3.form}}</p><p>Definition:</p><p>{{current3.verb_english}}</p><p>Example:</p><p>{{current3.example_english}}</p></md-list-item>
         <md-list-item><p>Tense:&nbsp;{{current3.combined_tense_english}}</p></md-list-item>
 
-        <form ng-submit="submitGuess(answer)" class="game-form">
+        <form ng-submit="submitGuessThree(answer3)" class="game-form">
 
           <md-input-container>
-            <label>Answer</label><input ng-model="answer.guess" type="text" required>
+            <label>Answer</label><input ng-model="answer3.guess" type="text" required id='answer-field3'>
           </md-input-container>
 
 
-          <div layout="row"><p>á</p>&nbsp;<p>é</p>&nbsp;<p>í</p>&nbsp;<p>ó</p>&nbsp;<p>ú</p>&nbsp;<p>ñ</p></div>
+          <div layout="row">
+            <span id="accent-a3" class="spec-char-btn">á</span>&nbsp;
+            <span id="accent-e3" class="spec-char-btn">é</span>&nbsp;
+            <span id="accent-i3" class="spec-char-btn">í</span>&nbsp;
+            <span id="accent-o3" class="spec-char-btn">ó</span>&nbsp;
+            <span id="accent-u3" class="spec-char-btn">ú</span>&nbsp;
+            <span id="accent-n3" class="spec-char-btn">ñ</span>
+          </div>
 
           <md-button class="md-accent md-hue-3 md-raised game-progress">Submit</md-button>
         </form>
       </md-list>
 
-<!--       <div class="md-actions" id="interim" class="interim" layout="row" layout-align="center center" style="display:none;">
-        <md-button style="margin-top:4rem;" id="interim-btn" class= "md-accent md-hue-3 md-raised game-progress" style="display:none;" ng-click="continueGame()">Next Question</md-button>
-      </div> -->
+      <div class="nooice" id="nooice-wrap" class="interim" layout="row" layout-align="center center" style="display:none;">
+        <div id="NOOICE" style="display:none;">NOOOICE</div>
+      </div>
 
   </md-content>
 </div>

@@ -527,6 +527,19 @@ md-fab-toolbar.md-fab-toolbar-wrapper {
 
   .game-quest {
     margin: 2.5rem;
+    padding: 2rem;
+  }
+
+  .spec-char-btn {
+    cursor: pointer;
+    border-radius: 2px;
+    border: solid 1px brown;
+    width: 16px;
+    text-align: center;
+  }
+
+  .spec-char-btn:hover {
+    color: $ltgrey;
   }
 }
 //
