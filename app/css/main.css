@@ -402,5 +402,5 @@ md-fab-toolbar.md-fab-toolbar-wrapper {
     margin-right: 0; }
   .game-card-wrap .game-play-head {
     border-bottom: solid 9px brown; }
-  .game-card-wrap .game-field {
-    height: 600px; }
+  .game-card-wrap .game-quest {
+    margin: 2.5rem; }

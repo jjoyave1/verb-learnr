@@ -8,7 +8,71 @@
 
   <md-content class="game-field">
       <div class="md-actions" id="game-start-field" layout="row" layout-align="center center">
-        <md-button class="md-accent md-hue-3 md-raised game-start" style="margin-top: 4rem;">Start Game</md-button>
+        <md-button class="md-accent md-hue-3 md-raised game-start" style="margin:4rem 0 4rem 0;" ng-click="startGame()">Start Game</md-button>
       </div>
+
+
+      <md-list class = "game-quest" id="game-quest">
+        <md-list-item><p>Verb:</p><p>{{current1.verb}}</p><p>Form [person]:</p><p>{{current1.form}}</p></md-list-item>
+        <md-list-item><p>Definition:</p><p>{{current1.verb_english}}</p><p>Example:</p><p>{{current1.example_english}}</p></md-list-item>
+        <md-list-item><p>Tense:&nbsp;{{current1.combined_tense_english}}</p></md-list-item>
+
+        <form ng-submit="submitGuess(answer)" class="game-form">
+
+          <md-input-container>
+            <label>Answer</label><input ng-model="answer.guess" type="text" required>
+          </md-input-container>
+
+
+          <div layout="row"><p>á</p>&nbsp;<p>é</p>&nbsp;<p>í</p>&nbsp;<p>ó</p>&nbsp;<p>ú</p>&nbsp;<p>ñ</p></div>
+
+          <md-button class="md-accent md-hue-3 md-raised game-progress">Submit</md-button>
+        </form>
+      </md-list>
+
+<!--  -->
+
+      <md-list class = "game-quest" id="game-quest">
+        <md-list-item><p>Verb:</p><p>{{current2.verb}}</p><p>Form [person]:</p><p>{{current2.form}}</p></md-list-item>
+        <md-list-item><p>Definition:</p><p>{{current2.verb_english}}</p><p>Example:</p><p>{{current2.example_english}}</p></md-list-item>
+        <md-list-item><p>Tense:&nbsp;{{current2.combined_tense_english}}</p></md-list-item>
+
+        <form ng-submit="submitGuess(answer)" class="game-form">
+
+          <md-input-container>
+            <label>Answer</label><input ng-model="answer.guess" type="text" required>
+          </md-input-container>
+
+
+          <div layout="row"><p>á</p>&nbsp;<p>é</p>&nbsp;<p>í</p>&nbsp;<p>ó</p>&nbsp;<p>ú</p>&nbsp;<p>ñ</p></div>
+
+          <md-button class="md-accent md-hue-3 md-raised game-progress">Submit</md-button>
+        </form>
+      </md-list>
+
+<!--  -->
+
+      <md-list class = "game-quest" id="game-quest">
+        <md-list-item><p>Verb:</p><p>{{current3.verb}}</p><p>Form [person]:</p><p>{{current3.form}}</p></md-list-item>
+        <md-list-item><p>Definition:</p><p>{{current3.verb_english}}</p><p>Example:</p><p>{{current3.example_english}}</p></md-list-item>
+        <md-list-item><p>Tense:&nbsp;{{current3.combined_tense_english}}</p></md-list-item>
+
+        <form ng-submit="submitGuess(answer)" class="game-form">
+
+          <md-input-container>
+            <label>Answer</label><input ng-model="answer.guess" type="text" required>
+          </md-input-container>
+
+
+          <div layout="row"><p>á</p>&nbsp;<p>é</p>&nbsp;<p>í</p>&nbsp;<p>ó</p>&nbsp;<p>ú</p>&nbsp;<p>ñ</p></div>
+
+          <md-button class="md-accent md-hue-3 md-raised game-progress">Submit</md-button>
+        </form>
+      </md-list>
+
+<!--       <div class="md-actions" id="interim" class="interim" layout="row" layout-align="center center" style="display:none;">
+        <md-button style="margin-top:4rem;" id="interim-btn" class= "md-accent md-hue-3 md-raised game-progress" style="display:none;" ng-click="continueGame()">Next Question</md-button>
+      </div> -->
+
   </md-content>
 </div>
