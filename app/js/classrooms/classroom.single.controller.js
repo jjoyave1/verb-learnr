@@ -59,6 +59,15 @@
     $scope.goToExerciseEditPage = function (exerciseId) {
       $location.path('classrooms/' + $stateParams.id + "/exercises/" + exerciseId);
     };
+
+    $scope.goToExerciseStatPage = function (exerciseId) {
+      $location.path('classrooms/' + $stateParams.id + "/exercises/" + exerciseId + "/statistics");
+    };
+
+    $scope.goToGame = function (exerciseId) {
+      $location.path('classrooms/' + $stateParams.id + '/exercises/' + exerciseId + '/play');
+    };
+
 ///
 ///
 ///

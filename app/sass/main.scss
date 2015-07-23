@@ -10,7 +10,7 @@ $ltgrey: #B1B1B1;
 body {
   background: url('../images/bright_squares.png');
   background-repeat: repeat;
-  height: 1000px;
+  height: 1550px;
   @include outer-container(100%);
   .ng-scope {
     height: 100%;
@@ -23,7 +23,7 @@ body {
 
 .head-nav {
   margin-bottom: 2rem;
-  border-bottom: solid 9px brown;
+  border-bottom: solid 9px navy;
   @include span-columns(8);
   @include shift(2);
   position: fixed;
@@ -51,7 +51,7 @@ body {
   margin-top: 7rem;
 
   .login-headers {
-    border-bottom: solid 9px brown;
+    border-bottom: solid 9px navy;
   }
 }
 
@@ -130,7 +130,7 @@ body {
 }
 
 .profile-headers {
-  border-bottom: solid 9px brown;
+  border-bottom: solid 9px navy;
 }
 
 .prof-content {
@@ -250,7 +250,7 @@ md-fab-toolbar.md-fab-toolbar-wrapper {
 //
 
 .create-class-head {
-  border-bottom: solid 9px brown;
+  border-bottom: solid 9px navy;
 }
 
 .create-class-form {
@@ -288,7 +288,7 @@ md-fab-toolbar.md-fab-toolbar-wrapper {
   margin-top: 7rem;
 
   .classroom-table-head {
-    border-bottom: solid 9px brown;
+    border-bottom: solid 9px navy;
   }
 
   .class-table-row-wrap {
@@ -373,7 +373,7 @@ md-fab-toolbar.md-fab-toolbar-wrapper {
   @include shift(2);
 
   .exercises-head {
-    border-bottom: solid 9px brown;
+    border-bottom: solid 9px navy;
   }
 
   form {
@@ -433,7 +433,7 @@ md-fab-toolbar.md-fab-toolbar-wrapper {
   margin-top: 7rem;
 
   .join-requests-head {
-    border-bottom: solid 9px brown;
+    border-bottom: solid 9px navy;
   }
 
   .join-request-info {
@@ -508,6 +508,12 @@ md-fab-toolbar.md-fab-toolbar-wrapper {
   background-color: white;
 }
 
+.classroom-exercise-list-wrap {
+  @include span-columns(8);
+  @include shift(2);
+  background-color: white;
+}
+
 //
 //
 //
@@ -522,7 +528,7 @@ md-fab-toolbar.md-fab-toolbar-wrapper {
   background-color: white;
 
   .game-play-head {
-    border-bottom: solid 9px brown;
+    border-bottom: solid 9px navy;
   }
 
   .game-quest {
@@ -533,7 +539,7 @@ md-fab-toolbar.md-fab-toolbar-wrapper {
   .spec-char-btn {
     cursor: pointer;
     border-radius: 2px;
-    border: solid 1px brown;
+    border: solid 1px navy;
     width: 16px;
     text-align: center;
   }
@@ -541,7 +547,107 @@ md-fab-toolbar.md-fab-toolbar-wrapper {
   .spec-char-btn:hover {
     color: $ltgrey;
   }
+
+  .nooice {
+    margin: 0 auto;
+
+    #nooice {
+      text-align: center;
+    }
+  }
 }
 //
+//
+//
+
+//
+// stats styles
+//
+
+.stats-card-wrap {
+  @include span-columns(8);
+  @include shift(2);
+  background-color: white;
+}
+
+.exercise-stats-head {
+  border-bottom: solid 9px navy;
+}
+
+.stat-table-headers-row {
+  display: inline-block;
+  width:25%;
+}
+
+.stat-table-header {
+  border-bottom: 1px solid rgb(230,230,230);
+  color: rgb(130,130,130);
+  text-align: left;
+  font-size: 0.75em;
+  font-weight: 700;
+  padding: 16px 7rem 16px 5rem;
+}
+
+.stat-table-cell {
+  display:block;
+  width: 100%;
+}
+
+.stat-table-text {
+  display: inline-block;
+  width: 24%;
+  text-align: center;
+  font-size: 10px;
+}
+
+.stat-table-row-wrap {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.stat-table-row {
+  height: 60px;
+  padding-top: 23px;
+}
+.stat-table-row:hover {
+  background-color: lightblue;
+}
+
+.mistakes-card {
+  display: inline-block;
+  width: 33%;
+
+  h5 {
+    text-align: center;
+    color: $ltgrey;
+    border-bottom: solid 1px navy;
+    margin: 1rem 0.3rem 1rem 0.3rem;
+    padding-bottom: 1rem;
+  }
+
+  md-card {
+    height: 10rem;
+    overflow: scroll;
+    width: 100%;
+
+  }
+
+  p {
+    font-size: 10px;
+  }
+}
+
+//
+//
+//
+
+//
+// Question Stats
+//
+.stat-list {
+  padding: 1rem;
+}
+///
 //
 //

@@ -40,6 +40,7 @@
     });
 
 
+
     $scope.dataFormat = function(str) {
 
       var params = {
@@ -57,6 +58,22 @@
       $location.path('classrooms/' + $stateParams.id + '/exercises/' + $stateParams.exerciseId + '/play');
     };
 
+///
+/// LOADING STATISTICS
+/// implementing table template/controller with some of the same functions
+    ExerciseService.getExerciseStats($stateParams.exerciseId).then( function (data) {
+      $scope.exerciseScores = data;
+      console.log($scope.exerciseScores);
+    });
+
+    $scope.goToQuestionStats = function (questionId) {
+      $location.path('classrooms/' + $stateParams.id + '/exercises/' + $stateParams.exerciseId + '/statistics/' + questionId);
+    };
+
+
+///
+///
+///
 
   }]);
 }());

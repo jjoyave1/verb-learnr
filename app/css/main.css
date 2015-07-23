@@ -9,7 +9,7 @@ html {
 body {
   background: url("../images/bright_squares.png");
   background-repeat: repeat;
-  height: 1000px;
+  height: 1550px;
   max-width: 100%;
   margin-left: auto;
   margin-right: auto; }
@@ -22,7 +22,7 @@ body {
 
 .head-nav {
   margin-bottom: 2rem;
-  border-bottom: solid 9px brown;
+  border-bottom: solid 9px navy;
   float: left;
   display: block;
   margin-right: 2.35765%;
@@ -49,7 +49,7 @@ body {
   .login-wrap:last-child {
     margin-right: 0; }
   .login-wrap .login-headers {
-    border-bottom: solid 9px brown; }
+    border-bottom: solid 9px navy; }
 
 .registration-form {
   text-align: center;
@@ -103,7 +103,7 @@ body {
     margin-right: 0; }
 
 .profile-headers {
-  border-bottom: solid 9px brown; }
+  border-bottom: solid 9px navy; }
 
 .prof-content {
   padding: 1.5rem;
@@ -208,7 +208,7 @@ md-fab-toolbar.md-fab-toolbar-wrapper {
     margin-right: 0; }
 
 .create-class-head {
-  border-bottom: solid 9px brown; }
+  border-bottom: solid 9px navy; }
 
 .create-class-form {
   margin: 0 auto;
@@ -236,7 +236,7 @@ md-fab-toolbar.md-fab-toolbar-wrapper {
   .classroom-table-wrap:last-child {
     margin-right: 0; }
   .classroom-table-wrap .classroom-table-head {
-    border-bottom: solid 9px brown; }
+    border-bottom: solid 9px navy; }
   .classroom-table-wrap .class-table-row-wrap {
     text-decoration: none;
     color: inherit; }
@@ -298,7 +298,7 @@ md-fab-toolbar.md-fab-toolbar-wrapper {
   .exercise-form-wrap:last-child {
     margin-right: 0; }
   .exercise-form-wrap .exercises-head {
-    border-bottom: solid 9px brown; }
+    border-bottom: solid 9px navy; }
   .exercise-form-wrap form {
     margin-left: 5%;
     margin-bottom: 2rem; }
@@ -338,7 +338,7 @@ md-fab-toolbar.md-fab-toolbar-wrapper {
   .join-requests-wrap:last-child {
     margin-right: 0; }
   .join-requests-wrap .join-requests-head {
-    border-bottom: solid 9px brown; }
+    border-bottom: solid 9px navy; }
   .join-requests-wrap .join-request-info b {
     width: 13%;
     display: inline-block; }
@@ -390,6 +390,16 @@ md-fab-toolbar.md-fab-toolbar-wrapper {
   .exercise-question-list-wrap:last-child {
     margin-right: 0; }
 
+.classroom-exercise-list-wrap {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%;
+  margin-left: 17.05961%;
+  background-color: white; }
+  .classroom-exercise-list-wrap:last-child {
+    margin-right: 0; }
+
 .game-card-wrap {
   float: left;
   display: block;
@@ -401,15 +411,85 @@ md-fab-toolbar.md-fab-toolbar-wrapper {
   .game-card-wrap:last-child {
     margin-right: 0; }
   .game-card-wrap .game-play-head {
-    border-bottom: solid 9px brown; }
+    border-bottom: solid 9px navy; }
   .game-card-wrap .game-quest {
     margin: 2.5rem;
     padding: 2rem; }
   .game-card-wrap .spec-char-btn {
     cursor: pointer;
     border-radius: 2px;
-    border: solid 1px brown;
+    border: solid 1px navy;
     width: 16px;
     text-align: center; }
   .game-card-wrap .spec-char-btn:hover {
     color: #B1B1B1; }
+  .game-card-wrap .nooice {
+    margin: 0 auto; }
+    .game-card-wrap .nooice #nooice {
+      text-align: center; }
+
+.stats-card-wrap {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%;
+  margin-left: 17.05961%;
+  background-color: white; }
+  .stats-card-wrap:last-child {
+    margin-right: 0; }
+
+.exercise-stats-head {
+  border-bottom: solid 9px navy; }
+
+.stat-table-headers-row {
+  display: inline-block;
+  width: 25%; }
+
+.stat-table-header {
+  border-bottom: 1px solid #e6e6e6;
+  color: #828282;
+  text-align: left;
+  font-size: 0.75em;
+  font-weight: 700;
+  padding: 16px 7rem 16px 5rem; }
+
+.stat-table-cell {
+  display: block;
+  width: 100%; }
+
+.stat-table-text {
+  display: inline-block;
+  width: 24%;
+  text-align: center;
+  font-size: 10px; }
+
+.stat-table-row-wrap {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer; }
+
+.stat-table-row {
+  height: 60px;
+  padding-top: 23px; }
+
+.stat-table-row:hover {
+  background-color: lightblue; }
+
+.mistakes-card {
+  display: inline-block;
+  width: 33%; }
+  .mistakes-card h5 {
+    text-align: center;
+    color: #B1B1B1;
+    border-bottom: solid 1px navy;
+    margin: 1rem 0.3rem 1rem 0.3rem;
+    padding-bottom: 1rem; }
+  .mistakes-card md-card {
+    height: 10rem;
+    overflow: scroll;
+    width: 100%; }
+  .mistakes-card p {
+    font-size: 10px; }
+
+.stat-list {
+  padding: 1rem; }

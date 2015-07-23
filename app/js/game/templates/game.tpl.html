@@ -91,8 +91,20 @@
         </form>
       </md-list>
 
-      <div class="nooice" id="nooice-wrap" class="interim" layout="row" layout-align="center center" style="display:none;">
-        <div id="NOOICE" style="display:none;">NOOOICE</div>
+      <div class="nooice" id="nooice-wrap" class="interim" layout="row" layout-align="center center">
+        <md-list id="nooice" style="display:none;">
+
+<!--           <md-list-item><b>Scores for {{statsThisGame.user.username}}</b></md-list-item>
+          <md-list-item>Accuracy:&nbsp;{{trunc(statsThisGame.accuracy)}}({{statsThisGame.score.correct}} out of {{statsThisGame.score.attempts}})</md-list-item>
+          <md-list-item></md-list-item> -->
+
+          <md-list-item>Routing to classrooms...</md-list-item>
+
+          <md-list-item>
+            <md-progress-linear md-mode="indeterminate"></md-progress-linear>
+          </md-list-item>
+
+        </md-list>
       </div>
 
   </md-content>

@@ -34,13 +34,30 @@
       method: 'POST',
       url: endpoint + "exercises/" + id + "/games/save",
       headers: HEROKU.CONFIG.headers,
-      data: data
+      data: {data: data}
     }).then(function (data) {
       console.log(data);
     });
 
-
   };
+
+  this.getGameStats = function (id) {
+
+    var deferred = $q.defer();
+
+    HEROKU.CONFIG.headers['Access-Token'] = $cookies.get('sessionToken');
+
+    $http({
+      method : 'GET',
+      url : endpoint + "game/" + id + "/scores",
+      headers: HEROKU.CONFIG.headers
+    }).then( function (res) {
+      return deferred.resolve(res.data);
+    });
+    return deferred.promise;
+  };
+
+
     }]);
 
 }());

@@ -1,0 +1,83 @@
+<div layout="column" layout-align="center center" class="md-whiteframe-z2 stats-card-wrap" style="margin-bottom: 2.5rem;margin-top:7rem;">
+
+  <md-toolbar>
+    <div class="md-toolbar-tools exercise-stats-head" id="exercise-stats-head">
+      <h2>Exercise Statistics</h2>
+    </div>
+  </md-toolbar>
+
+  <md-content>
+
+  <table class="md-table" ng-controller="StatsTable">
+    <thead>
+      <tr class = "stat-table-headers-row" ng-repeat="h in statheaders">
+        <th class = "stat-table-header">{{h.name}}</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>
+          <div ng-repeat="x in exerciseScores" ng-click="goToQuestionStats(x.question.id)" class="stat-table-row-wrap">
+            <div class = "stat-table-row" style:"padding-top:1em;">
+
+
+                <div class="stat-table-cell">
+                  <div class="stat-table-text">
+                    {{ x.question.conjugation }}<br/><br/>
+                  </div>
+
+                  <div class="stat-table-text" style="padding-left:1em;">
+                    {{ x.score_data.attempts }}<br/><br/>
+                  </div>
+
+                  <div class="stat-table-text" style="padding-left:1em;">
+                    {{ x.score_data.correct }}<br/><br/>
+                  </div>
+
+                  <div class="stat-table-text" style="padding-left:2em;">
+                    {{ trunc(x.score_data.accuracy) }}&#37;<br/><br/>
+                  </div>
+                </div>
+
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+
+  </table>
+
+  </md-content>
+</div>
+
+<!--  -->
+<!-- COMMON MISTAKES -->
+<!--  -->
+<div layout="column" layout-align="center center" class="md-whiteframe-z2 stats-card-wrap" style="margin-bottom: 2.5rem;">
+  <md-toolbar>
+    <div class="md-toolbar-tools exercise-stats-head" id="exercise-stats-head">
+      <h2>Common Mistakes</h2>
+    </div>
+  </md-toolbar>
+
+  <md-content>
+    <md-list>
+      <md-list-item ng-repeat = "s in exerciseScores" class="mistakes-card">
+
+        <md-card>
+
+            <h5>{{s.question.conjugation}}</h6>
+
+            <md-card-content>
+
+              <p ng-repeat="cm in s.common_mistakes">incorrect answer:&nbsp;{{ cm.mistake }}&comma;&nbsp;[{{ cm.count }}]</p>
+
+            </md-card-content>
+
+        </md-card>
+
+      </md-list-item>
+    </md-list>
+  </md-content>
+</div>

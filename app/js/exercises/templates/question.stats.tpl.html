@@ -1,0 +1,82 @@
+<div layout="column" layout-align="center center" class="md-whiteframe-z2 stats-card-wrap" style="margin-bottom: 2.5rem;margin-top:7rem;">
+
+  <md-toolbar>
+    <div class="md-toolbar-tools exercise-stats-head" id="exercise-stats-head">
+      <h2>Question Statistics</h2>
+    </div>
+  </md-toolbar>
+
+  <md-content>
+    <md-list class="stat-list">
+      <md-list-item style="width:100%;">
+        <div class="row" style="width:100%">
+
+          <p style="display:inline-block;width:24%;text-align:center;"><b>Verb</b></p>
+          <p style="display:inline-block;width:24%;text-align:center;">Form</p>
+          <p style="display:inline-block;width:24%;text-align:center;">Tense</p>
+          <p style="display:inline-block;width:24%;text-align:center;">Correct Conjugation</p>
+
+        </div>
+      </md-list-item>
+
+      <md-list-item style="width:100%;">
+        <div class="row" style="width:100%">
+
+          <p style="display:inline-block;width:24%;text-align:center;">{{ questionParams.verb }}</p>
+          <p style="display:inline-block;width:24%;text-align:center;">{{ questionParams.form }}</p>
+          <p style="display:inline-block;width:24%;text-align:center;">{{ questionParams.tense }}</p>
+          <p style="display:inline-block;width:24%;text-align:center;">{{ questionParams.conjugation }}</p>
+
+        </div>
+      </md-list-item>
+
+      <hr />
+
+      <md-list-item>
+        <div class="row">
+          <p style="margin-left:3.2rem; width: 100%; display: block;"><b>Score Data</b></p>
+        </div>
+      </md-list-item>
+
+      <md-list-item>
+        <div class="row" style="width:100%;clear:both;">
+          <p style="display:inline-block;width:24%;text-align:center;">attempts</p>
+          <p style="display:inline-block;width:24%;text-align:center;">correct</p>
+          <p style="display:inline-block;width:24%;text-align:center;">wrong</p>
+          <p style="display:inline-block;width:24%;text-align:center;">accuracy</p>
+        </div>
+      </md-list-item>
+
+      <md-list-item>
+        <div class="row" style="width:100%;clear:both;">
+          <p style="display:inline-block;width:24%;text-align:center;border-right:solid 1px grey;">{{ questionStats.attempts }}</p>
+          <p style="display:inline-block;width:24%;text-align:center;border-right:solid 1px grey;">{{ questionStats.correct }}</p>
+          <p style="display:inline-block;width:24%;text-align:center;border-right:solid 1px grey;">{{ questionStats.wrong }}</p>
+          <p style="display:inline-block;width:24%;text-align:center;">{{ trunc(questionStats.accuracy) }}&#37;</p>
+        </div>
+      </md-list-item>
+
+      <hr />
+      <md-list-item style="width=100%;border-bottom:solid 1px navy;margin-top: 1.5rem;margin-left:3.2rem;margin-right:3.2rem;">
+          <b style="width:100%">Student Data</b>
+      </md-list-item>
+
+      <md-list-item>
+        <md-card ng-repeat="u in userStats" style="padding:1rem; text-align:center;display:inline-block;" flex>
+          <div style="width:100%; margin: 0 auto;">
+            <img src="{{u.user.avatar}}" style="width:23%;">
+          </div>
+
+          <md-card-content>
+            <p>username:&nbsp;{{u.user.username}}</p>
+            <p>student name:&nbsp;{{u.user.last_name}}&comma;&nbsp;{{user.first_name}}</p>
+            <hr />
+            <p>Attempts:&nbsp;{{ u.attempts }}&nbsp;|&nbsp;Accuracy:{{trunc(u.accuracy)}}&#37;</p>
+            <p>Common Errors:<p ng-repeat="cm in u.common_mistakes" style="font-size:10px; display: inline-block;border-top:solid 1px grey;padding:0.5rem;border-bottom:solid 1px grey;padding:0.5rem;">{{cm.mistake}}&comma;&nbsp;{{cm.count}}&nbsp;</p></p>
+          </md-card-content>
+        </md-card>
+      <md-list-item>
+    </md-list>
+  </md-content>
+
+</div>

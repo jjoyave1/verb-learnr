@@ -6,7 +6,7 @@
 
     .config(function ($urlRouterProvider, $stateProvider, $mdThemingProvider) {
 
-    $mdThemingProvider.theme('default').primaryPalette('amber').accentPalette('deep-orange');
+    $mdThemingProvider.theme('default').primaryPalette('light-blue').accentPalette('blue');
 
     $urlRouterProvider.otherwise('/');
 
@@ -83,6 +83,19 @@
         url: '/classrooms/:id/exercises/:exerciseId/play',
         templateUrl: 'js/game/templates/game.tpl.html',
         controller: 'Game'
+      })
+
+      .state('exercisestats', {
+        url: '/classrooms/:id/exercises/:exerciseId/statistics',
+        templateUrl: 'js/exercises/templates/stats.exercise.tpl.html',
+        controller: 'Exercise'
+      })
+
+      .state('questionstats', {
+        url: '/classrooms/:id/exercises/:exerciseId/statistics/:questionId',
+        templateUrl: 'js/exercises/templates/question.stats.tpl.html',
+        controller: 'Question'
+
       });
 
   })

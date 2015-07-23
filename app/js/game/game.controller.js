@@ -4,8 +4,8 @@
 
   angular.module('Unoverb')
 
-    .controller('Game', ['$scope','$http', 'HEROKU', '$cookies', '$q', 'GameService', 'ExerciseService', '$stateParams',
-      function ($scope, $http, HEROKU, $cookies, $q, GameService, ExerciseService, $stateParams) {
+    .controller('Game', ['$scope','$http', 'HEROKU', '$cookies', '$q', 'GameService', 'ExerciseService', '$stateParams', '$state',
+      function ($scope, $http, HEROKU, $cookies, $q, GameService, ExerciseService, $stateParams, $state) {
 
     $scope.startGame = function () {
 
@@ -28,7 +28,8 @@
         $scope.submitGuessOne = function (answer) {
           var answerData = {
             question_id : $scope.current1.question_id,
-            guess : answer.guess
+            guess : answer.guess,
+            time: 3
           };
 
           $scope.finalData.push(answerData);
@@ -41,7 +42,8 @@
         $scope.submitGuessTwo = function (answer) {
           var answerData = {
             question_id : $scope.current2.question_id,
-            guess : answer.guess
+            guess : answer.guess,
+            time: 3
           };
 
           $scope.finalData.push(answerData);
@@ -53,15 +55,24 @@
         $scope.submitGuessThree = function (answer) {
           var answerData = {
             question_id : $scope.current3.question_id,
-            guess : answer.guess
+            guess : answer.guess,
+            time: 3
           };
 
           $scope.finalData.push(answerData);
 
-          $("#game-quest2").fadeOut();
-          $("#game-quest3").fadeIn();
+          $("#game-quest3").fadeOut();
+          $("#nooice").fadeIn();
 
           GameService.sendAnswers($scope.finalData, $stateParams.exerciseId);
+
+          // GameService.getGameStats($stateParams.exerciseId).then(function (data) {
+          //   $scope.statsThisGame = data;
+          //   console.log($scope.statsThisGame);
+          // });
+          setTimeout( function () {
+            $state.go('classroomtable');
+          }, 5000);
         };
 
       });
@@ -81,6 +92,9 @@
       }
     };
 
+    $scope.trunc = function (x) {
+      return Math.trunc(x);
+    };
 
 ///
 /// SP CHAR HANDLERS

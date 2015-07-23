@@ -151,6 +151,47 @@
 ///
 ///
 ///
+
+///
+/// STAT FUNCTIONS
+///
+
+      this.getExerciseStats = function (id) {
+
+        var deferred = $q.defer();
+
+        HEROKU.CONFIG.headers['Access-Token'] = $cookies.get('sessionToken');
+
+        $http({
+          method : 'GET',
+          url : endpoint + "exercises/" + id + "/scores",
+          headers: HEROKU.CONFIG.headers
+        }).then( function (res) {
+          return deferred.resolve(res.data);
+        });
+        return deferred.promise;
+      };
+
+      this.getQuestionStats = function (id) {
+
+        var deferred = $q.defer();
+
+        HEROKU.CONFIG.headers['Access-Token'] = $cookies.get('sessionToken');
+
+        $http({
+          method : 'GET',
+          url : endpoint + "questions/" + id + "/scores",
+          headers: HEROKU.CONFIG.headers
+        }).then( function (res) {
+          return deferred.resolve(res.data);
+        });
+        return deferred.promise;
+      };
+
+///
+///
+///
+
     }]);
 
 }());

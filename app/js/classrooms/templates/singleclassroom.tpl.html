@@ -74,8 +74,9 @@
       <h6>Exercise: {{x.name}}</h6>
       <p ng-if"x.description" style="font-size: 10px;margin-left: 0.9rem;"> Description: {{x.description}}</p>
 
-      <p class = "exercise-nav">Run Exercise</p>
+      <p class = "exercise-nav" ng-click="goToGame(x.id)">Run Exercise</p>
       <p class = "exercise-nav" ng-click="goToExerciseEditPage(x.id)">Edit Exercise</p>
+      <p class = "exercise-nav" ng-click="goToExerciseStatPage(x.id)">View Statistics</p>
       <p class = "exercise-nav" style="color: red">Delete Exercise</p>
 
 
