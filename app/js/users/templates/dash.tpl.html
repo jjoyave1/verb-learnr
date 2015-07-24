@@ -1,11 +1,11 @@
-<div layout="column" layout-align="center center" class="md-whiteframe-z2 profile-wrap" style="margin-bottom: 8rem;">
+<div layout="column" layout-align="center center" class="md-whiteframe-z2 dash-wrap" style="margin-bottom: 8rem;">
   <div ng-controller="User" layout="column" layout-align="center center" class="md-whiteframe-z2">
-    <a href="/#/login">Login</a> &bull;
-    <a href="/#/profile" ng-click="getProfile()" style="outline:none;">Profile</a> &bull; <!--  need to add :id to url -->
-    <a href="/#/createclassroom">Create Classroom</a> &bull;
-    <a href="/#/classrooms">Classrooms</a> &bull;
-    <a href="/#/dashboard">Dash</a> &bull;
-    <a href="/#/logout" ng-click="logout()">Logout</a>
+    <a href="/#/login" class="dash-links">Login</a> &bull;
+    <a href="/#/profile" ng-click="getProfile()" style="outline:none;" class="dash-links">Profile</a> &bull; <!--  need to add :id to url -->
+    <a href="/#/createclassroom" class="dash-links">Create Classroom</a> &bull;
+    <a href="/#/classrooms" class="dash-links">Classrooms</a> &bull;
+    <a href="/#/dashboard" class="dash-links">Dash</a> &bull;
+    <a href="/#/logout" ng-click="logout()" class="dash-links">Logout</a>
   </div>
 </div>
 

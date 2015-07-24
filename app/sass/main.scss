@@ -118,6 +118,31 @@ body {
 }
 
 //
+// DASH STYLES
+//
+
+.dash-wrap {
+  @include span-columns(8);
+  @include shift(2);
+  background-color: white;
+  margin-top: 7rem;
+
+  .dash-links {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .dash-links:hover {
+    text-decoration: underline;
+  }
+}
+
+//
+//
+//
+
+
+//
 // PROFILE PAGE STYLING
 //
 
