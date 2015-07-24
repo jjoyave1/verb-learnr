@@ -698,7 +698,7 @@ md-fab-toolbar.md-fab-toolbar-wrapper {
     margin-top: 7rem;
   }
 }
-@include media(max-width 1018px) {  //styling for ipad
+@include media(max-width 1024px) {  //styling for ipad
 
   .head-nav {
     margin: 0 auto;
@@ -718,13 +718,15 @@ md-fab-toolbar.md-fab-toolbar-wrapper {
 
   }
 
+  .class-table-row {
+    margin-left: 5.5rem;
+  }
+
   .table-text {
     font-size: 9.5px;
   }
 
-  .table-avatar {
-    margin-left: 7rem;
-  }
+
 
   .table-cell {
     text-align:right;
@@ -750,13 +752,14 @@ md-fab-toolbar.md-fab-toolbar-wrapper {
 
   }
 
+  .class-table-row {
+    margin-left: 5.5rem;
+  }
+
   .table-text {
     font-size: 9.5px;
   }
 
-  .table-avatar {
-    margin-left: 7rem;
-  }
 
   .table-cell {
     text-align:right;
@@ -781,6 +784,10 @@ md-fab-toolbar.md-fab-toolbar-wrapper {
     background-color: white;
     margin-top: 7rem;
 
+  }
+
+  .class-table-row {
+    margin-left: 5.5rem;
   }
 
   .table-avatar {

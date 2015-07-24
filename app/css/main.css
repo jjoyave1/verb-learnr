@@ -535,7 +535,7 @@ md-fab-toolbar.md-fab-toolbar-wrapper {
     .classroom-table-wrap:last-child {
       margin-right: 0; } }
 
-@media screen and (max-width: 1018px) {
+@media screen and (max-width: 1024px) {
   .head-nav {
     margin: 0 auto;
     margin-bottom: 2rem;
@@ -557,10 +557,10 @@ md-fab-toolbar.md-fab-toolbar-wrapper {
     margin-top: 7rem; }
     .classroom-table-wrap:last-child {
       margin-right: 0; }
+  .class-table-row {
+    margin-left: 5.5rem; }
   .table-text {
     font-size: 9.5px; }
-  .table-avatar {
-    margin-left: 7rem; }
   .table-cell {
     text-align: right; } }
 
@@ -586,10 +586,10 @@ md-fab-toolbar.md-fab-toolbar-wrapper {
     margin-top: 7rem; }
     .classroom-table-wrap:last-child {
       margin-right: 0; }
+  .class-table-row {
+    margin-left: 5.5rem; }
   .table-text {
     font-size: 9.5px; }
-  .table-avatar {
-    margin-left: 7rem; }
   .table-cell {
     text-align: right; } }
 
@@ -615,6 +615,8 @@ md-fab-toolbar.md-fab-toolbar-wrapper {
     margin-top: 7rem; }
     .classroom-table-wrap:last-child {
       margin-right: 0; }
+  .class-table-row {
+    margin-left: 5.5rem; }
   .table-avatar {
     margin: 1rem; }
   .table-text {
