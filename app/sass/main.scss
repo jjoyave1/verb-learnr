@@ -698,7 +698,38 @@ md-fab-toolbar.md-fab-toolbar-wrapper {
     margin-top: 7rem;
   }
 }
+@include media(max-width 900px) {  //styling for ipad
 
+  .head-nav {
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    border-bottom: solid 9px navy;
+    @include span-columns(12);
+    // position: fixed;
+    // top: 0;
+    z-index:25;
+  }
+
+  .classroom-table-wrap {
+    margin: 0 auto;
+    @include span-columns(12);
+    background-color: white;
+    margin-top: 7rem;
+
+    tbody {
+      tr {
+        td {
+          padding-left:3rem;
+        }
+      }
+    }
+  }
+
+  .table-text {
+    font-size: 9.5px;
+  }
+
+}
 @include media(max-width 800px) {  //styling for ipad
 
   .head-nav {
@@ -716,12 +747,20 @@ md-fab-toolbar.md-fab-toolbar-wrapper {
     @include span-columns(12);
     background-color: white;
     margin-top: 7rem;
+
+    tbody {
+      tr {
+        td {
+          padding-left:3rem;
+        }
+      }
+    }
   }
 
   .table-text {
-    margin-left: 3rem;
-    text-align: right;
+    font-size: 9.5px;
   }
+
 }
 
 @include media(max-width 720px) {  //styling for ipad
@@ -741,10 +780,21 @@ md-fab-toolbar.md-fab-toolbar-wrapper {
     @include span-columns(12);
     background-color: white;
     margin-top: 7rem;
+
+    tbody {
+      tr {
+        td {
+          padding-left:3rem;
+        }
+      }
+    }
   }
 
-  .table-text {
-    margin-left: 3rem;
-    text-size: 8px;
+  .table-avatar {
+    margin: 1rem;
   }
+  .table-text {
+    font-size: 8px;
+  }
+
 }
