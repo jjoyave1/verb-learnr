@@ -535,6 +535,35 @@ md-fab-toolbar.md-fab-toolbar-wrapper {
     .classroom-table-wrap:last-child {
       margin-right: 0; } }
 
+@media screen and (max-width: 1018px) {
+  .head-nav {
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    border-bottom: solid 9px navy;
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+    z-index: 25; }
+    .head-nav:last-child {
+      margin-right: 0; }
+  .classroom-table-wrap {
+    margin: 0 auto;
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+    background-color: white;
+    margin-top: 7rem; }
+    .classroom-table-wrap:last-child {
+      margin-right: 0; }
+  .table-text {
+    font-size: 9.5px; }
+  .table-avatar {
+    margin-left: 7rem; }
+  .table-cell {
+    text-align: right; } }
+
 @media screen and (max-width: 800px) {
   .head-nav {
     margin: 0 auto;
@@ -557,10 +586,12 @@ md-fab-toolbar.md-fab-toolbar-wrapper {
     margin-top: 7rem; }
     .classroom-table-wrap:last-child {
       margin-right: 0; }
-    .classroom-table-wrap tbody tr td {
-      padding-left: 5rem; }
   .table-text {
-    font-size: 9.5px; } }
+    font-size: 9.5px; }
+  .table-avatar {
+    margin-left: 7rem; }
+  .table-cell {
+    text-align: right; } }
 
 @media screen and (max-width: 720px) {
   .head-nav {
@@ -584,8 +615,6 @@ md-fab-toolbar.md-fab-toolbar-wrapper {
     margin-top: 7rem; }
     .classroom-table-wrap:last-child {
       margin-right: 0; }
-    .classroom-table-wrap tbody tr td {
-      padding-left: 3rem; }
   .table-avatar {
     margin: 1rem; }
   .table-text {
