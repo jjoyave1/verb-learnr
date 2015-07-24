@@ -699,6 +699,31 @@ md-fab-toolbar.md-fab-toolbar-wrapper {
   }
 }
 
+@include media(max-width 800px) {  //styling for ipad
+
+  .head-nav {
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    border-bottom: solid 9px navy;
+    @include span-columns(12);
+    // position: fixed;
+    // top: 0;
+    z-index:25;
+  }
+
+  .classroom-table-wrap {
+    margin: 0 auto;
+    @include span-columns(12);
+    background-color: white;
+    margin-top: 7rem;
+  }
+
+  .table-text {
+    margin-left: 3rem;
+    text-align: right;
+  }
+}
+
 @include media(max-width 720px) {  //styling for ipad
 
   .head-nav {
@@ -719,6 +744,7 @@ md-fab-toolbar.md-fab-toolbar-wrapper {
   }
 
   .table-text {
-    margin-left: 1rem;
+    margin-left: 3rem;
+    text-size: 8px;
   }
 }
