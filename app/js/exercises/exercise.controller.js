@@ -70,6 +70,10 @@
       $location.path('classrooms/' + $stateParams.id + '/exercises/' + $stateParams.exerciseId + '/statistics/' + questionId);
     };
 
+    $scope.trunc = function (x) {
+      return Math.trunc(x);
+    };
+
 
 ///
 ///

@@ -511,3 +511,49 @@ md-fab-toolbar.md-fab-toolbar-wrapper {
 
 .stat-list {
   padding: 1rem; }
+
+@media screen and (max-width: 1270px) {
+  .head-nav {
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    border-bottom: solid 9px navy;
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+    z-index: 25; }
+    .head-nav:last-child {
+      margin-right: 0; }
+  .classroom-table-wrap {
+    margin: 0 auto;
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+    background-color: white;
+    margin-top: 7rem; }
+    .classroom-table-wrap:last-child {
+      margin-right: 0; } }
+
+@media screen and (max-width: 720px) {
+  .head-nav {
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    border-bottom: solid 9px navy;
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+    z-index: 25; }
+    .head-nav:last-child {
+      margin-right: 0; }
+  .classroom-table-wrap {
+    margin: 0 auto;
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 100%;
+    background-color: white;
+    margin-top: 7rem; }
+    .classroom-table-wrap:last-child {
+      margin-right: 0; } }
