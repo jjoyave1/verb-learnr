@@ -91,6 +91,24 @@ body {
 .login-submit {
   width: 84.1%; }
 
+.dash-wrap {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 65.88078%;
+  margin-left: 17.05961%;
+  background-color: white;
+  margin-top: 7rem;
+  padding: 1rem; }
+  .dash-wrap:last-child {
+    margin-right: 0; }
+  .dash-wrap .dash-links {
+    text-decoration: none;
+    color: inherit;
+    padding: 0.5rem 0 0.5rem 0; }
+  .dash-wrap .dash-links:hover {
+    text-decoration: underline; }
+
 .profile-wrap {
   float: left;
   display: block;

@@ -126,10 +126,12 @@ body {
   @include shift(2);
   background-color: white;
   margin-top: 7rem;
+  padding: 1rem;
 
   .dash-links {
     text-decoration: none;
     color: inherit;
+    padding: 0.5rem 0 0.5rem 0;
   }
 
   .dash-links:hover {
