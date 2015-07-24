@@ -1,13 +1,19 @@
 <div layout="column" layout-align="center center" class="md-whiteframe-z2 profile-wrap" style="margin-bottom: 8rem;">
   <div ng-controller="User" layout="column" layout-align="center center" class="md-whiteframe-z2">
-    <p> THIS IS THE DASH PAGE</p>
+    <a href="/#/login">Login</a> &bull;
+    <a href="/#/profile" ng-click="getProfile()" style="outline:none;">Profile</a> &bull; <!--  need to add :id to url -->
+    <a href="/#/createclassroom">Create Classroom</a> &bull;
+    <a href="/#/classrooms">Classrooms</a> &bull;
+    <a href="/#/dashboard">Dash</a> &bull;
+    <a href="/#/logout" ng-click="logout()">Logout</a>
   </div>
 </div>
 
-<div layout="column" layout-align="center center" class="md-whiteframe-z2 profile-wrap" style="margin-bottom: 8rem;">
+<!-- <div layout="column" layout-align="center center" class="md-whiteframe-z2 profile-wrap" style="margin-bottom: 8rem;">
   <div ng-controller="Classroom" layout="column" layout-align="center center" class="md-whiteframe-z2">
     <p> THIS IS THE CLASSROOM DISPLAY</p>
 
     <a></a>
   </div>
 </div>
+ -->
