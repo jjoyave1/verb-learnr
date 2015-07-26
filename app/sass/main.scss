@@ -700,7 +700,7 @@ md-fab-toolbar.md-fab-toolbar-wrapper {
 }
 @include media(max-width 1024px) {  //styling for ipad
 
-  .head-nav {
+  .head-nav, .login-form, .classroom-exercise-list-wrap, .stats-card-wrap, .game-card-wrap, .exercise-builder-list-wrap, .join-requests-wrap {
     margin: 0 auto;
     margin-bottom: 2rem;
     border-bottom: solid 9px navy;
@@ -734,7 +734,7 @@ md-fab-toolbar.md-fab-toolbar-wrapper {
 }
 @include media(max-width 800px) {  //styling for ipad
 
-  .head-nav {
+  .head-nav, .login-form, .classroom-exercise-list-wrap, .stats-card-wrap, .game-card-wrap, .exercise-builder-list-wrap, .join-requests-wrap {
     margin: 0 auto;
     margin-bottom: 2rem;
     border-bottom: solid 9px navy;
@@ -768,7 +768,7 @@ md-fab-toolbar.md-fab-toolbar-wrapper {
 
 @include media(max-width 720px) {  //styling for ipad
 
-  .head-nav {
+  .head-nav, .login-form, .classroom-exercise-list-wrap, .stats-card-wrap, .game-card-wrap, .exercise-builder-list-wrap, .join-requests-wrap {
     margin: 0 auto;
     margin-bottom: 2rem;
     border-bottom: solid 9px navy;
